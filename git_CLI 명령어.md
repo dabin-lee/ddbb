@@ -107,10 +107,7 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 
 >    $git add ->  git commit --amend 명령어를 입력하면  마지막 커밋메세지 수정(ref)
 >    $git commit --amend : 마지막 커밋메세지 수정(ref)
+>    $git branch -d 삭제할 브랜치명 :  local 브랜치 삭제 
+>    $git push origin :삭제된 브랜치명 :  remote 브랜치 삭제 
+>    $git fetch --prune :  ref 브랜치 삭제 
 
->  local 브랜치 삭제 
-> >git branch -d 삭제할 브랜치명 
-> remote 브랜치 삭제
-> >git push origin :삭제된 브랜치명 
-> ref 브랜치 삭제
-> >git fetch --prune
