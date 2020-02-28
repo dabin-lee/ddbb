@@ -105,9 +105,9 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 >    $git reset --hard HEAD~n : 마지막 n개의 커밋을 취소. 파일 또한 복구됨.<br>
 >    $git reset HEAD * : 스테이징을 언스테이징으로 변경, ref<br>
 
->    $git add ->  git commit --amend 명령어를 입력하면  마지막 커밋메세지 수정(ref)
->    $git commit --amend : 마지막 커밋메세지 수정(ref)
->    $git branch -d 삭제할 브랜치명 :  local 브랜치 삭제 
->    $git push origin :삭제된 브랜치명 :  remote 브랜치 삭제 
->    $git fetch --prune :  ref 브랜치 삭제 
+>    $git add ->  git commit --amend 명령어를 입력하면  마지막 커밋메세지 수정(ref)<br>
+>    $git commit --amend : 마지막 커밋메세지 수정(ref)<br>
+>    $git branch -d 삭제할 브랜치명 :  local 브랜치 삭제 <br>
+>    $git push origin :삭제된 브랜치명 :  remote 브랜치 삭제 <br>
+>    $git fetch --prune :  ref 브랜치 삭제 <br>
 
