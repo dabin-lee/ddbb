@@ -117,7 +117,7 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 >    $ git branch -d 삭제할 브랜치명 :  local 브랜치 삭제 <br>
 >    $ git push origin :branch_name  ex) $ git push origin :shopping_cart : 원격에 있는 브랜치를 삭제.<br>
 >    $ git remote prune origin : remote 브랜치 clean up 하기<br>
-  <br>
+      <br>
 >    $git branch -d 삭제할 브랜치명 :  local 브랜치 삭제 <br>
 >    $git push origin :삭제된 브랜치명 :  remote 브랜치 삭제 <br>
 >    $git fetch --prune :  ref 브랜치 삭제 <br>
