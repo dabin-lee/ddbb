@@ -115,13 +115,18 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 >    삭제할 브런치외에 다른 브런치로 checkout
 >    $ git remote show origin 어떤 브런치가 있는지 확인<br>
 ### local branch 삭제
->    $ git branch -d 삭제할 브랜치명 :  local 브랜치 삭제 <br>
+>    $ git branch -D 삭제할 브랜치명 :  local 브랜치 삭제 <br>
 
 ### remote branch 삭제
 >     1번) $ git push origin --delete <branch name><br>
 >     2번) $ git push origin :branch_name  ex) $ git push origin :shopping_cart : 원격에 있는 브랜치를 삭제.<br>
->     3번) $ git remote prune origin : remote 브랜치 clean up 하기<br>
       
->    $git branch -d 삭제할 브랜치명 :  local 브랜치 삭제 <br>
->    $git push origin :삭제된 브랜치명 :  remote 브랜치 삭제 <br>
->    $git fetch --prune :  ref 브랜치 삭제 <br>
+### git remote prune - git remote prune은 리모트 브랜치의 더 이상 유효하지 않은 참조를 깨끗이 지우는 명령어   
+>     $ git remote prune origin : remote 브랜치 clean up 하기<br>
+>     $ git remote update --prune
+      
+### 축약버전
+>     $ git branch --delete --remotes <remote>/<branch><br>
+>     $ git branch -dr <remote>/<branch> # 위 명령어의 축약버전<br>
+>     $ git fetch <remote> --prune # 유효하지 않은 tracking 브랜치들을 일괄 삭제한다<br>
+>     $ git fetch <remote> -p # 축약 버전<br>      
