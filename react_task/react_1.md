@@ -27,3 +27,23 @@ npm과 npx의 차이 : npm은 프로그램을 설치하는 프로그램 npx는 c
 
 change directory : cd 디렉토리 네임 ( cd Desktop -> cd react-app )
 create-react-app . : 현재디렉토리는 . 
+
+
+---
+
+#react 실행
+  > npm run start => npm시작
+  > ctrl + c => 종료
+  
+  ---
+  ```
+  public -> index.html
+  index.html -> id="root"
+  root안에 
+  만든 component들이 root안에 들어갈 수 있도록 create react app 은 설정 되어 있음
+  * 개발 작업한 대부분의 file은 scr안에 넣게 될 것임.
+  * 반드시 리액트는 하나의 태그 안쪽에 나머지 태그들이 있어야 한다. (가장 밖은 태그가 하나)
+  
+  ```
+     > npm run build
+     > npx serve -s build
