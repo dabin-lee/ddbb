@@ -11,7 +11,7 @@
 
 
 
-1. 컴포넌트 생성
+### 1.컴포넌트 생성
  ```
 // App.js
 class Subject extends Component {	// 클래스명은 대문자로 시작
@@ -30,7 +30,7 @@ class Subject extends Component {	// 클래스명은 대문자로 시작
 React는 JSX를 HTML로 변환하는 역할
 ```
 
- 2. 컴포넌트 사용
+### 2.컴포넌트 사용
 ```
 // App.js
 class App extends Component {
@@ -44,7 +44,7 @@ class App extends Component {
 }
 ```
 
-3. prop
+### 3.prop
  ```
  태그의 재사용성을 높이기 위한 속성
 class Subject extends Component {
