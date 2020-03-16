@@ -70,3 +70,77 @@ class App extends Component {
     }
 }
  ```
+
+### 4-1. component 파일로 분리
+```
+//TOC.js
+import React, { Component } from 'react';
+//'react' 라는 라이브러리에서 아래의 component를 사용하기 위해서 Component를 로딩
+
+class TOC extends Component{
+    render(){
+    return(
+        <nav>
+            <ul>
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html">CSS</a></li>
+                <li><a href="3.html">Javascript</a></li>
+            </ul>
+        </nav>
+        );
+    }
+}
+
+```
+
+### 4-2. 외부 허용
+```
+//TOC.js
+▽
+export default TOC;
+import React, { Component } from 'react';
+
+class TOC extends Component{
+    render(){
+    return(
+        <nav>
+            <ul>
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html">CSS</a></li>
+                <li><a href="3.html">Javascript</a></li>
+            </ul>
+        </nav>
+        );
+    }
+}
+export default TOC;
+//현재 component안의 여러가지 변수나 함수 등을 외부에서 사용할 수 있도록 허용하기 : export
+
+
+//APP.js
+import TOC from "./components/TOC"
+//TOC라는 컴포넌트를 from 경로 에서 가지고 옴
+▽
+import React, { Component } from 'react';
+import Subject from "./components/Subject"
+import TOC from "./components/TOC"
+import Content from "./components/Content"
+import './App.css';
+
+class App extends Component {
+  render() {
+    return (
+    <div className="App">
+      <Subject title="WEB" sub="world wide web!"></Subject>
+      <Subject title="React" sub="For UI"></Subject>
+      <TOC></TOC>
+      <Content title="HTML" desc="HTML is HyperText Markup Language."></Content>
+    </div>
+    );
+  }
+}
+
+export default App;
+
+```
+
