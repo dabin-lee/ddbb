@@ -44,3 +44,28 @@ class App extends Component {
   }
 }
 ```
+
+ - 3. prop
+ ```
+ 태그의 재사용성을 높이기 위한 속성
+class Subject extends Component {
+    render(){
+      return (
+        <header>
+          <h1>{this.props.title}</h1>	// 현재 태그의 title 속성(props) 값
+          {this.props.sub}	// 현재 태그의 sub 속성 값
+        </header>
+      );
+    }
+}
+class App extends Component {
+    render() {
+      return (
+        <div className="App">
+          <Subject title="WEB" sub="world wide web!"></Subject>
+          <Subject title="React" sub="For UI"></Subject>
+        </div>
+      );
+    }
+}
+ ```
