@@ -96,7 +96,7 @@ class TOC extends Component{
 ### 4-2. 외부 허용
 ```
 //TOC.js
-▽
+▽▼
 export default TOC;
 import React, { Component } from 'react';
 
@@ -118,9 +118,9 @@ export default TOC;
 
 
 //APP.js
+▽▼
 import TOC from "./components/TOC"
 //TOC라는 컴포넌트를 from 경로 에서 가지고 옴
-▽
 import React, { Component } from 'react';
 import Subject from "./components/Subject"
 import TOC from "./components/TOC"
