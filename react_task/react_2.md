@@ -74,7 +74,7 @@ class App extends Component {
 ### 4-1. component 파일로 분리
 ```
 //TOC.js
-import React, { Component } from 'react';
+import React, { Component } from 'react';  // React 코드를 쓴다면 필수!
 //'react' 라는 라이브러리에서 아래의 component를 사용하기 위해서 Component를 로딩
 
 class TOC extends Component{
@@ -90,15 +90,15 @@ class TOC extends Component{
         );
     }
 }
-
+export default TOC; //TOC 컴포넌트 내보내기
 ```
 
-### 4-2. 외부 허용
+### 4-2. 외부 허용 / 파일 사용
 ```
 //TOC.js
 ▽▼
 export default TOC;
-import React, { Component } from 'react';
+import React, { Component } from 'react'; //리액트 사용 선언
 
 class TOC extends Component{
     render(){
@@ -119,8 +119,7 @@ export default TOC;
 
 //APP.js
 ▽▼
-import TOC from "./components/TOC"
-//TOC라는 컴포넌트를 from 경로 에서 가지고 옴
+import TOC from "./components/TOC" //TOC라는 컴포넌트를 from 경로 에서 불러옴
 import React, { Component } from 'react';
 import Subject from "./components/Subject"
 import TOC from "./components/TOC"
