@@ -14,12 +14,11 @@
 ```
 import React from 'react';
 
-class StateExample extends React.Component {
-   constructor(props) {
-      super(props);
-
+class App extends Component {
+  constructor(props){ //constructor 초기화
+    super(props); 
+    
       this.state = {
-         header: "Header Initial state",
          Subject:{title:'WEB', sub: 'World Wid Web!'}
      };
    }
