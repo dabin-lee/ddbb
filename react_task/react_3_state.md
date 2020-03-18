@@ -18,8 +18,8 @@ class App extends Component {
     
     }
 ```
--하나의 component가 실행될 때 render라는 함수 보다 먼저 실행 되면서, 그 컴포넌트를 초기화 시켜주는 코드는 constructor안에다 작성을 한다. 
- 즉, 제일 먼저실행 (초기화 먼저 됨)
+- 하나의 component가 실행될 때 render라는 함수 보다 먼저 실행 되면서, <br>
+ 그 컴포넌트를 초기화 시켜주는 코드는 constructor안에다 작성을 한다.  즉, 제일 먼저실행 (초기화 먼저 됨)
 
 ```
 import React from 'react';
