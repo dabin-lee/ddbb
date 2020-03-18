@@ -126,3 +126,5 @@ export default TOC;
 - element 자동으로 생성시, 각각의 list항목은 props라는 key를 갖고 있어야 한다.  (key가없으면 console창에서 에러가 발생)
 
 - data라는 props 사용자의 입장에서 
+
+### state setting
