@@ -49,7 +49,7 @@ create-react-app . : 현재디렉토리는 .
 ---
 
 4. 웹앱 실행
-  > npm run start => npm시작
+  > npm run start => npm시작<br>
   > ctrl + c => 종료  
   ---
   
