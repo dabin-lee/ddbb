@@ -88,24 +88,21 @@ render() {
 ### 여러개의 state 다루는 방법 - key
 
 ```
-
-// loading 하는게 없으면 경고 표시
+ [state 사용해서 TOC 리팩토링]
+ 
 import React, { Component } from 'react';
-//'react' 라는 라이브러리에서 아래의 component를 사용하기 위해서 Component를 로딩
-
 
 class TOC extends Component{
-    render(){
-        var lists = []; //nav안에 있는 li가 나타나게 될 태그들을 lists 배열에 담음
+    render(){ 
         // 글 목록 생성
+        var lists = []; //nav안에 있는 li가 나타나게 될 태그들을 lists 배열에 담음
         var data = this.props.data;
         var i = 0;
         while(i < data.length){
             lists.push(<li><a href={"/content/"+data[i].id}>{data[i].title}</a></li>);
             //반복문이 실행 될 때마다 lists에다 아래 코드를 push
-            i = i + 1;
-        }
-        //props의 데이터 값 만큼 반복, 반복 할 때마다 i의 값은 +1 이된다.
+            i = i + 1; //props의 데이터 값 만큼 반복, 반복 할 때마다 i의 값은 +1 이된다.
+        } 
         return(
             <nav>
                 <ul>
@@ -119,7 +116,13 @@ class TOC extends Component{
     }
 
 export default TOC;
-//현재 component안의 여러가지 변수나 함수 등을 외부에서 사용할 수 있도록 허용하기 : export
-
 ```
 -app의 내부 state를 TOC 컴포넌트에 주입 , 목록이 추가될 때마다 TOC를 열지 않아도 됨
+
+
+```
+  
+```
+- element 자동으로 생성시, 각각의 list항목은 props라는 key를 갖고 있어야 한다.  (key가없으면 console창에서 에러가 발생)
+
+- data라는 props 사용자의 입장에서 
