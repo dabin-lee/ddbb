@@ -55,19 +55,24 @@ create-react-app . : 현재디렉토리는 .
   
   5. JS 코딩하는 법
   ```
-  public -> index.html
-  index.html -> id="root"
-  root안에 
-  만든 component들이 root안에 들어갈 수 있도록 create react app 은 설정 되어 있음
-  * 개발 작업한 대부분의 file은 scr안에 넣게 될 것임.
-  * 반드시 리액트는 하나의 태그 안쪽에 나머지 태그들이 있어야 한다. (가장 밖은 태그가 하나)
+  - public 디렉토리 index.html ->  id="root"
+    root안에 리액트로 만든 component들이 root안에 들어갈 수 있도록 create react app 은 설정 되어 있음
+  
+  - id = "root" 의 안에 들어가는 내용은 어떤 파일을 수정하는지?
+    * 개발 작업한 대부분의 file은 scr안에 넣게 될 것임.
+    * 그 중에서 entry file은 index.js라는 파일.
+      - document.getElementById('root'); : id값이 root인 태그를 선택함, 이 것을 기반으로 public > index.html 의 root를 사용한다.
+      - ReactDOM.render<App />, : 리액트를 통해 만든 사용자 정의 컴포넌트이다. 이것을 가지고 리액트를 활용함.
+      - src > App.js 파일 수정 활용       
+    * 반드시 리액트는 Component 하나의 태그 안쪽에 나머지 태그들이 있어야 한다. (가장 밖은 태그가 하나)
   
   ```
   
-  6. CSS 코딩
-  ```
+  6. CSS 코딩 - create react app의 지배하에서 css를 수정
+  ``` 
   src - index.css과 App.css
-  import './App.css';와 같은 명령으로 css 파일 삽입
+  - //index.js 안의 사용자 정의 태그인 component와 (ReactDOM.render<App />,) import된 부분(import App from)이 일치해야 한다. 
+  - App.css 는 App.js라는 React의 component가 load됐을때, 함께 로드된다. 
   ```
   
   7. 배포[build]
