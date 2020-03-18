@@ -36,8 +36,8 @@ class App extends Component {
 - this.state = {} 로 state값을 초기화 시킨다. 
 - constructor(생성자) 메소드에서 this.state= { } 를 통하여 설정합니다.
 - Subject의 property값과 객채를 준다.  title:'WEB', sub: 'World Wid Web!'
--{/* react에서 props에 ""(따옴표)로 묶어주면 문자열이 됨 */} <br>
- {/* javascript의 코드로써 사용하고 싶을때는 {}중괄호를 사용 */}
+- {/* react에서 props에 ""(따옴표)로 묶어주면 문자열이 됨 */} <br>
+  {/* javascript의 코드로써 사용하고 싶을때는 {}중괄호를 사용 */}
 
 ```   
    updateHeader(text){
