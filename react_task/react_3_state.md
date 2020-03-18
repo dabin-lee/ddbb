@@ -12,6 +12,16 @@
 ### state 사용
 
 ```
+class App extends Component {
+  constructor(props){ // 초기화
+    super(props); 
+    
+    }
+```
+-하나의 component가 실행될 때 render라는 함수 보다 먼저 실행 되면서, 그 컴포넌트를 초기화 시켜주는 코드는 constructor안에다 작성을 한다. 
+ 즉, 제일 먼저실행 (초기화 먼저 됨)
+
+```
 import React from 'react';
 
 class App extends Component {
@@ -19,11 +29,15 @@ class App extends Component {
     super(props); 
     
       this.state = {
-         Subject:{title:'WEB', sub: 'World Wid Web!'}
+         Subject:{title:'WEB', sub: 'World Wid Web!'} //Subject의 값을 state화 시킴
      };
    }
 ```
-  * state 의 초기 값을 설정 할 때는 constructor(생성자) 메소드에서 this.state= { } 를 통하여 설정합니다.
+- this.state = {} 로 state값을 초기화 시킨다. 
+- constructor(생성자) 메소드에서 this.state= { } 를 통하여 설정합니다.
+- Subject의 property값과 객채를 준다.  title:'WEB', sub: 'World Wid Web!'
+-{/* react에서 props에 ""(따옴표)로 묶어주면 문자열이 됨 */} <br>
+ {/* javascript의 코드로써 사용하고 싶을때는 {}중괄호를 사용 */}
 
 ```   
    updateHeader(text){
@@ -60,7 +74,7 @@ render() {
   * state 를 렌더링 할 때는 { this.state.stateName } 을 사용합니다.
   
   ```
-  //index.js
+  //index.js : App.js를 사용하고 있는 파일
   ReactDOM.render(<App />, document.getElementById('root')); // APP이라는 컴포넌트를 실행하라는 코드
   
   코드의 값이 내부적으로 state값이 subject가 있는지 없는지 알 수 없다.
@@ -68,7 +82,7 @@ render() {
   
   APP이 내부적으로 사용하는 상태는 State라는 형태를 통해서 사용한다.
   그리고 그렇게 만들어진 state값을 Subject의 props값으로 줬음. -> 
-  상위 컴포넌트인 앱의 상태를 하위 컴포넌트로 전달하고 싶을 때, 하위컴포넌트의 props값으로 전달.
+  상위 컴포넌트인 앱의 상태를 하위 컴포넌트로 전달하고 싶을 때, 상위 컴포넌트의 state값을 하위컴포넌트의 props값으로 전달.
 
   
   ```
