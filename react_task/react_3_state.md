@@ -217,12 +217,40 @@ element를 자동으로 여러개 생성
 ## render
 
  - 어떤 html을 그릴 것인가를 결정하는 함수
- - react에서 props의 값이나 state값이 바뀌면 해당되는 component의 render함수가 호출 되도록 약속되어 있다. 
+ - react에서 props의 값이나 state값이 바뀌면 해당되는 component의 render함수가 재호출 되도록 약속되어 있다. 
   👉 props나 state가 바뀌면 화면이 다시 그려진다는 뜻
   
-  
   ```
- render 
+
+// Subject.js (제목에 링크 추가)
+<h1><a href="/">{this.props.title}</a></h1>
+// App.js
+constructor(props){	// 'mode'와 'welcome' state 추가
+    super(props);
+    this.state = {
+      mode: "welcome",
+      subject: {title: 'WEB', sub: 'World Wide Web!'},
+      welcome: {title: 'Welcome', desc: 'Hello, React!'},
+      contents: [...]
+    }
+  }
+render() {	// Content 컴포넌트에 표시될 '_title', '_desc'를 'mode' 값에 따라 설정
+    var _title, _desc = null;
+    if(this.state.mode === 'welcome'){
+      _title = this.state.welcome.title;
+      _desc = this.state.welcome.desc;
+    }else if(this.state.mode === 'read'){	// 추후 보완 필요
+      _title = this.state.contents[0].title;
+      _desc = this.state.contents[0].desc;
+    }
+    return (
+      <div className="App">
+        ...
+        <Content title={_title} desc={_desc}></Content>
+      </div>
+    );
+  }
+  
  
   ```
   
