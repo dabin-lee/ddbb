@@ -38,7 +38,7 @@ render() {
 - e라고 준 객체에 event가 발생한 태그의 기본적인 동작을 하지 못하도록 함 : e.preventDefault();
 
 
-## 이벤트에서 state 변경하기
+## 이벤트에서 state 변경하기 - setState
 
 ```
 //App.js
@@ -65,23 +65,41 @@ return (
     </div>
     );
 
-```
-- this의 값을 찾지 못한다면 함수가 끝난 직후에 .bind(this)를 쓴다.
 
-```
 //App.js
-
 <header>
-          <h1><a href="/" onClick={function(e){// 링크 클릭시 실행되는 사용자 정의 함수
-              // alert('hi');
-              e.preventDefault();
-              // this.state.mode = 'welcome'; -> this의 값이 component 자신의 값을 가르키지 않고 아무값도 셋팅이 되어 있지 않음 
-              this.setState({              
-                mode : 'welcome' //바꾸고 싶은 값
-              });
-            }.bind(this)}>{this.state.Subject.title}</a></h1> 
-          {this.state.Subject.sub}    
-      </header>
+      <h1><a href="/" onClick={function(e){// 링크 클릭시 실행되는 사용자 정의 함수
+          // alert('hi');
+          e.preventDefault();
+          // this.state.mode = 'welcome'; -> this의 값이 component 자신의 값을 가르키지 않고 아무값도 셋팅이 되어 있지 않음 
+          this.setState({              
+            mode : 'welcome' //바꾸고 싶은 값
+          });
+        }.bind(this)}>{this.state.Subject.title}</a></h1> 
+      {this.state.Subject.sub}    
+ </header>
+      
       
 ```
-- state값이 바뀐지를 알려면 setState({바꾸고 싶은값}); 을 쓴다.
+- state값을 바꾸려면 setState({바꾸고 싶은값}); 을 쓴다.
+- 이벤트가 실행되는 함수 안에서 this는 아무런 값도 세팅되지 않은 상태
+    👉 bind(this)로 현재 컴포넌트를 this로 사용 가능!
+
+
+## .bind(this)
+```
+
+var obj = {name:'ㅇㅇㅇㅇ'};
+
+function bindTest(){
+	console.log(this.name);
+}
+bindTest();	// 값이 없음(this에 아무 값도 설정되어 있지 않으므로
+
+// bind 함수로 obj를 this로 설정해서 새로운 함수 생성
+var bindTest2 = bindTest.bind(obj);	
+bindTest2();	// ㅇㅇㅇㅇ 출력
+
+```
+- render() 함수 안에서 this 값은 render() 함수가 속한 컴포넌트를 가리킴
+- bind 함수
