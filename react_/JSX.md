@@ -14,7 +14,7 @@
 <br>
 <br>
 
-# JSX
+# JSX [JavaScript eXtention]
 - HTML과 유사하지만, 자바스크립트로 변환이 된다.
 - 지켜야 할 규칙
     1. 꼭 닫혀야 하는 태그 - 태그는 꼭 닫혀있어야 합니다. <div> 태그를 열었으면, </div> 를 통하여 태그를 꼭 닫아주어야 한다.
@@ -92,33 +92,47 @@
         >   -  const 와 let 은 scope 가 블록 단위이다. <br>
         Block scope 는 중괄호 ({ }) 를 기준으로 유효범위를 갖는다.
 
-    ```
-        function foo(){
-            var a = 'hello';
-            if (true) {
-                var a = 'bye';
-                console.log(a); // bye
-            }
-            console.log(a); // bye
-        }
+        >```
+        >    function foo(){
+        >        var a = 'hello';
+        >        if (true) {
+        >            var a = 'bye';
+        >            console.log(a); // bye
+        >        }
+        >        console.log(a); // bye
+        >    }
+        >
+        >        function foo(){
+        >            let a = 'hello';
+        >            if (true) {
+        >                var a = 'bye';
+        >                console.log(a); // bye
+        >           }
+        >            console.log(a); // hello
+        >        }
+        >
+        >```
+    3. 변수로 attribute 설정하기
+        > 변수로 어떤 값을 js로 설정해놓고 jsx에 해당 태그의 속성을 width = {변수이름} 이렇게 넣을 수 있다.
+        >```
+        >const sideLength = “200px”;
+        >const panda = (
+        > <img
+        >    src=”images/panda.jpg”
+        >    alt=”panda”
+        >    height={sideLength}
+        >    width={sideLength} />
+        >);
+        > -> img의 height / width 라는 attribute 를 {} 변수로 설정
+        >```
 
-        function foo(){
-            let a = 'hello';
-            if (true) {
-                var a = 'bye';
-                console.log(a); // bye
-            }
-            console.log(a); // hello
-        }
 
-    ```
-
-    3. 언제 써야할까? var vs const vs let
+    4. 언제 써야할까? var vs const vs let
         > var : ES6에서는 더 이상 사용하지 않음.
         > const : 한번 선언 후 고정적인 값을 사용 할 때
         > let : 한번 선언 해도 바뀔 수 있는 유동적인 값
 
-    4. 조건부 렌더링
+    5. 조건부 렌더링
         > 1) 중괄호 안에 직접적으로 if문을 사용 할 수 없다. JSX 내부에서 조건부 렌더링을 할 때는 보통 삼항 연산자를 사용하거나, AND 연산자를 사용한다.
         >   ```
         >   // 삼항연산자
@@ -180,3 +194,89 @@
 
         >   ```
         >   
+        > 3) 조건에 맞춰서 각각 다르게 실행해줄 때는 3항 연산자 혹은 if, switch 모두 사용 할 수 있다. 이때는 {}로 감싸준다.
+    >   ### 3항연산자
+        >    ```
+        >    import React, { Component } from "react";
+        >
+        >    class App extends Component {
+        >    render() {
+        >        let name = 'react';
+        >        return (
+        >        <div>
+        >           {
+        >           name === 'react'
+        >           ? '맞다'
+        >           : '아니다
+        >           }
+        >        </div>
+        >        );
+        >      }}
+        >   
+        >    export default App;
+        >    ```        
+
+    >   ### && || 연산자 (둘다 true / 둘중 하나 true)
+        >    ```
+        >    import React, { Component } from "react";
+        >
+        >    class App extends Component {
+        >    render() {
+        >        let name = 'react';
+        >        return (
+        >        <div>
+        >           {
+        >           name === 'react' && '맞다' || '아니다
+        >           }
+        >        </div>
+        >        );
+        >      }}
+        >   
+        >    export default App;
+        >    ```        
+
+    >   ### function과 if문을 사용
+        >    ```
+        >    import React, { Component } from "react";
+        >
+        >    class App extends Component {
+        >    render() {
+        >        let name = 'react';
+        >        return (
+        >        <div>
+        >           {
+        >           function(){
+        >               if(age === 1) return <div>age는 1이다.</div>
+        >               if(age === 2) return <div>age는 2이다.</div>
+        >               if(age === 3) return <div>age는 3이다.</div>
+        >               return <div>없다</div>
+        >           }()
+        >         }
+        >        </div>
+        >        );
+        >      }}
+        >   
+        >    export default App;
+        >    ```     
+
+    6. JSX에 CSS 적용시키기
+        > 1) 인라인 스타일링 - 카멜 표기법으로 사용
+        > -  background-color -> backgroundColor 
+        > 2) react에서는 className
+        > -  CSS를 import 한 후 className 에서 class를 지정
+        >    ```
+        >    import React, { Component } from "react";
+        >    import './App.css'
+        >
+        >    class App extends Component {
+        >    render() {
+        >        return (
+        >        <div className = "tEst">
+        >           {
+        >         }
+        >        </div>
+        >        );
+        >      }}
+        >   
+        >    export default App;
+        >    ``` 
