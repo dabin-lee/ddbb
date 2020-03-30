@@ -53,7 +53,7 @@ class Subject extends Component{
 export default Subject;
 
 ```
-
+ - 이벤트를 만드는 것 
  - onChangePage라는 event함수를 만듬 / 그 이벤트가 발생 되었을때, 
  this.props.onChangePage();를 호출
  - 호출 되었을때 state값 변경  -> this.setState({mode:'welcome'})
