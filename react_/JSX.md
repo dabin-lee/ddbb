@@ -126,7 +126,6 @@
         > -> img의 height / width 라는 attribute 를 {} 변수로 설정
         >```
 
-
     4. 언제 써야할까? var vs const vs let
         > var : ES6에서는 더 이상 사용하지 않음.
         > const : 한번 선언 후 고정적인 값을 사용 할 때
