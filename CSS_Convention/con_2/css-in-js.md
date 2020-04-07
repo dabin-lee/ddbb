@@ -11,7 +11,7 @@
     - Javascript를 이용해서 스타일을 선언적이고, 유지보수 가능.
     - JS를 CSS에 전환하는 고성능 컴퍼일러로, 런타임 및 서버 사이드에서 작동.
     - 이 코어 라이브러리는 낮은 레벨이며, 프레임워크에 구애받지 않음.
-    - 플러그인 API를 통해 확장 가능합니다.
+    - 플러그인 API를 통해 확장 가능
 
 
 ## 구현방식
@@ -22,26 +22,26 @@
     <br>
     세부적인 구현 방식에 차이가 있긴 하지만, 라이브러리의 기본 철학은 동일한다.
 
-    >   비교
-    >   > [inline-style]
-    >   > ```
-    >   > const textStyles = {
-    >   >   color: white,
-    >   >   backgroundColor: black
-    >   > }
-    >   > <p style={textStyles}>inline style!</p>
-    >   > ```
-    >   >
-    >   > [CSS-in-JS]
-    >   > ```
-    >   > import styled from 'styled-components';
-    >   >
-    >   > const Text = styled.div`
-    >   >   color: white,
-    >   >   background: black
-    >   > `
-    >   > <Text>Hello CSS-in-JS</Text>
-    >   > ```
+>   비교
+>   > [inline-style]
+>   > ```
+>   > const textStyles = {
+>   >   color: white,
+>   >   backgroundColor: black
+>   > }
+>   > <p style={textStyles}>inline style!</p>
+>   > ```
+>   >
+>   > [CSS-in-JS]
+>   > ```
+>   > import styled from 'styled-components';
+>   >
+>   > const Text = styled.div`
+>   >   color: white,
+>   >   background: black
+>   > `
+>   > <Text>Hello CSS-in-JS</Text>
+>   > ```
 
 ## css-in-js 의 장점
     1. 컴포넌트로 생각하기 — 더이상 스타일시트의 묶음을 유지보수 할 필요가 없습니다. CSS-in-JS는 CSS 모델을 문서 레벨이 아니라 컴포넌트 레벨로 추상화합니다(모듈성).
@@ -60,12 +60,12 @@
 |-------------------|---------------------------------------------------|
 | JSS-React         | ![Styled Components](./img/jss.png)               |
 | glamorous         | ![Styled Components](./img/glamorous.png)         |
-| Radium            | ![Styled Components](./img/Radium.png)            |
-| Stylotron         | ![Styled Components](./img/Stylotron.png)         |
+| Radium            | ![Styled Components](./img/radium.png)            |
+| Stylotron         | ![Styled Components](./img/styletron.png)         |
 
-Radium
-(inline style 방식, React에서 사용합니다.)
-JSS
-(Framework 관계없이 사용가능, material-ui 에서 사용합니다.)
-Styled-components
-(현재 가장 인기가 많습니다. 컴포넌트 기반 Framework에 최적화되어 있습니다.)
+- Radium
+    - (inline style 방식, React에서 사용합니다.)
+- JSS
+    - (Framework 관계없이 사용가능, material-ui 에서 사용합니다.)
+- Styled-components
+    - (현재 가장 인기가 많습니다. 컴포넌트 기반 Framework에 최적화되어 있습니다.)
