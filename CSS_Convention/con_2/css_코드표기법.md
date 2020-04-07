@@ -19,14 +19,14 @@
     - 변수 및 함수의 이름을 정하는 규칙
     - ex) int(i), float(f), char(ch), sz(NULL), boolean(b)
 
-4. 카멜 케이스 (Camel Case) - 단봉낙타 표기법 (Lower Camel Case)
+4. 카멜 케이스 (Camel Case) - 단봉낙타 표기법 (Lower Camel Case)<br>
     ![LowerCamel_img](./img/20200403_165452.png)
     - 낙타 등이 들쑥날쑥한 것처럼 표기
     - 첫 문자를 소문자로 표기하고, 그 다음 문자부터는 대문자로 표기
     - ex) camelCase, camelValueList, lowerCamelCase
     - 용도: 프로그래밍 변수명 권장
 
-5. 파스칼 표기법 (pascal) - 쌍봉낙타 표기법 (Upper Camel Case)
+5. 파스칼 표기법 (pascal) - 쌍봉낙타 표기법 (Upper Camel Case)<br>
     ![UpperCamel_img](./img/20200403_165534.png)
     - 첫 단어를 대문자로 시작하는 표기법
     - 첫 문자를 대문자로 표기하고, 그 다음 문자도 대문자로 표기하는 표기법.
