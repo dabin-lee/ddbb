@@ -133,8 +133,11 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 >     $ git fetch <remote> --prune # 유효하지 않은 tracking 브랜치들을 일괄 삭제한다<br>
 >     $ git fetch <remote> -p # 축약 버전<br>      
  --------------
+<<<<<<< HEAD:Git/git_CLI 명령어.md
 
 
 ## github에 있는 원격저장소에 로컬 저장소의 내용을 push하려 했지만 오류
 >    해결방법은 pull(fetch + merge) 명령어로 remote repository에 있는 파일과 로컬파일을 합치는 것이다.
 >    git push -f origin master : 강제로 push
+=======
+>>>>>>> 92df480d56bfad8bcd7ed18e7aa84513afcdcac3:git_CLI 명령어.md
