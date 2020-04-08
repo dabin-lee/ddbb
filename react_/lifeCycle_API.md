@@ -1,10 +1,10 @@
-컴포넌트가 브러우저상에서 
+컴포넌트가 브러우저상에서
 1. 나타날 때
 2. 업데이트 될 때
 3. 사라질 때
 
 
-![img_1](./lifecycle_api.png)
+![img_1](./img/lifecycle_api.png)
 ※ 초기 구성 ※
 
 
@@ -14,7 +14,7 @@
 # Mounting
 
 ## constructor
-- 컴포넌트 생성자 함수 / 컴포넌트가 새로 만들어 질 때마다 이 함수가 호출된다. 
+- 컴포넌트 생성자 함수 / 컴포넌트가 새로 만들어 질 때마다 이 함수가 호출된다.
 ```
 constructor(props) {
   super(props);
