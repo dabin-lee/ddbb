@@ -1,4 +1,5 @@
-# 2020 04월 첫째주 - CSS 표기법 및 방법론의 개념
+# 2020 04월 첫째주 -
+## CSS 표기법 및 방법론의 개념
 
 **[1. CSS 방법론](https://github.com/dabin-lee/ux/tree/master/CSS_Convention/con_2/css_metodologia.md)**
 
