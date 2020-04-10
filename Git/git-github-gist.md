@@ -1,18 +1,18 @@
 
 # Git 	: VCS (Version Control System)
-	원격 리소스에서 변경 사항을 Push or Pull 
+	원격 리소스에서 변경 사항을 Push or Pull
 
 
 # 주요 코드 저장소 GitHub, GitLab, Bitbucket
 	깃 저장소(Git Repository)에 대한 원격 액세스를 제공하는 서비스
 	Public/Private 서비스 제공
 
-	1. Github 
-		- 대표적 공개형(Public) 무료 서비스 
-		- 오픈 소스에 한해 무료 
+	1. Github
+		- 대표적 공개형(Public) 무료 서비스
+		- 오픈 소스에 한해 무료
 		- 단점 : 초기에 사용법 및 올리는 방법이 까다로운 점?
-	
-	2. gitLab 
+
+	2. gitLab
 		- 비공개형(Private) 무료 가능 서비스
 		- Community 버전 설치시 무료 (10명 이하)
 		- 단점 : Github 보다 더 어려운듯... 완전 개발자용... 우린 패스
@@ -24,9 +24,9 @@
 
 
 # 설치형 Git Server
-	1. Bonobo Git Server 
-	- 윈도우용 무료 Git서버 
-	- IIS에서 설치 가능 
+	1. Bonobo Git Server
+	- 윈도우용 무료 Git서버
+	- IIS에서 설치 가능
 
 
 # 코드 공유 서비스
@@ -55,3 +55,18 @@
 - https://dreamgonfly.github.io/2018/01/27/jekyll-remote-theme.html
 - https://dnight.tistory.com/entry/GitHubio-%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%A7%8C%EB%93%A4%EA%B8%B0
 
+
+### git Stash란?
+
+- branch를 이용하여 작업을 하다보면, branch 작업이 완료되지 않은 상태에서 다른 branch로 checkout을 해야 하는 상황이 발생합니다.
+- 이럴 때 아직 작업중인 파일을 commit을 하기도 곤란하고, commit하지 않으면 checkout이 어려운 상황이 발생합니다.
+- 이런 경우에는 stash를 사용하여 작업중인 파일을 숨겨 둘 수 있습니다.
+
+![stash_img](./img/9977FA495B31154F28.png)
+
+```
+1. git stash(=git stash save) : 하던 작업을 저장하고 가장 최근 commit상태로 만든다.
+2. git stash pop 또는 git stash apply : 저장되어 있는 작업중 가장 최근 stash를 가져온다.
+
+출처: https://jeong-pro.tistory.com/107 [기본기를 쌓는 정아마추어 코딩블로그]
+```

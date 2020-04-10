@@ -3,7 +3,7 @@
 <div style="border:1px dotted #ddd; padding:10px;">
 
 ### GIT을 다루는 2가지 방법<BR>
-- CLI(command line interface) - 명령어 인터페이스 창 (터미널 창)에 명령어를 입력하여 상호 처리합니다.<br> cmd.exe , Gitbash, VSCODE에서 TERMINAL사용 등 이있습니다. 
+- CLI(command line interface) - 명령어 인터페이스 창 (터미널 창)에 명령어를 입력하여 상호 처리합니다.<br> cmd.exe , Gitbash, VSCODE에서 TERMINAL사용 등 이있습니다.
 
 - GUI(Graphical User Interface) - 명령이나 작업을 이해하기 쉽도록 프로젝트 히스토리를 시각화하여 도와주는 도구입니다.
 
@@ -14,25 +14,25 @@
 >    $ git config --list<br>
 현재 설정정보 조회할 수 있습니다. <br>
 (--global옵션은 전역설정에 대한 옵션이며 현재 프로젝트에만 적용할때는 주지 않습니다.)
->    
+>
 >    $ git config --global user.name "사용자명"<br>
 사용자명을 등록 / 변경합니다. (필수)
->    
+>
 >    $ git config --global user.email "이메일주소"<br>
 >    이메일 주소를 등록 / 변경합니다. (필수)
->    
+>
 >    $ git config --local user.name "사용자명"<br>
 >    프로젝트 하나에서만 사용자명을 등록 / 변경합니다. (필수)
->    
+>
 >    $ git config --local user.email "이메일주소"<br>
 >    프로젝트 하나에서만 이메일 주소를 등록 / 변경합니다. (필수)
->    
+>
 >    $ git config --unset user.name "사용자명"<br>
 >    사용자명을 삭제합니다.
->    
+>
 >    $ git config --unset user.email  "이메일주소"<br>
 >    이메일 주소를 삭제합니다.
->    
+>
 - - -
 
 ## <span style="color:orange">2. git 명령어 <span>
@@ -121,17 +121,17 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 ### ★ remote branch 삭제
 >     1번) $ git push origin --delete <branch name><br>
 >     2번) $ git push origin :branch_name  ex) $ git push origin :shopping_cart : 원격에 있는 브랜치를 삭제.<br>
-      
+
 ### ★ git remote prune <br>
->     * git remote prune은 리모트 브랜치의 더 이상 유효하지 않은 참조를 깨끗이 지우는 명령어   
+>     * git remote prune은 리모트 브랜치의 더 이상 유효하지 않은 참조를 깨끗이 지우는 명령어
 >     $ git remote prune origin : remote 브랜치 clean up 하기<br>
 >     $ git remote update --prune
-      
+
 ### ★ 축약버전
 >     $ git branch --delete --remotes <remote>/<branch><br>
 >     $ git branch -dr <remote>/<branch> # 위 명령어의 축약버전<br>
 >     $ git fetch <remote> --prune # 유효하지 않은 tracking 브랜치들을 일괄 삭제한다<br>
->     $ git fetch <remote> -p # 축약 버전<br>      
+>     $ git fetch <remote> -p # 축약 버전<br>
  --------------
 <<<<<<< HEAD:Git/git_CLI 명령어.md
 
@@ -141,3 +141,5 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 >    git push -f origin master : 강제로 push
 =======
 >>>>>>> 92df480d56bfad8bcd7ed18e7aa84513afcdcac3:git_CLI 명령어.md
+
+
