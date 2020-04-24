@@ -61,7 +61,7 @@
 > ## 4. font
 > >### 폰트	
 > >```
-> >font, letter-spacing, text-align, text-decoration, text-indent, white-space, font-family, font-size, font-smoothing, font-style, font-weight, hyphens, src, line-height, word-spacing, color, text-overflow, text-rendering, text-size-adjust, text-shadow, text-transform, word-break, word-wrap, vertical-align, list-style, list-style-type, list-style-position, list-style-image, pointer-events, cursor
+> >font, font-style, font-variant, font-weight, font-size, line-height, font-family, color, letter-spacing, text-align, text-decoration, text-overflow, text-indent, vertical-align, white-space, word-spacing, ext-size-adjust, text-shadow, text-transform, word-break, word-wrap, font-smoothing, text-rendering, list-style, list-style-type, list-style-position, list-style-image, pointer-events, cursor
 > >```
 ---
 > ## 5. etc.
