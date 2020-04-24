@@ -70,3 +70,30 @@
 
 출처: https://jeong-pro.tistory.com/107 [기본기를 쌓는 정아마추어 코딩블로그]
 ```
+
+
+![stash_img](./img/9977FA495B31154F28.png)
+
+```
+1. git stash(=git stash save) : 하던 작업을 저장하고 가장 최근 commit상태로 만든다.
+2. git stash pop 또는 git stash apply : 저장되어 있는 작업중 가장 최근 stash를 가져온다.
+
+출처: https://jeong-pro.tistory.com/107 [기본기를 쌓는 정아마추어 코딩블로그]
+```
+
+![stash_img](./img/9977FA495B31154F28.png)
+
+```
+1. git stash(=git stash save) : 하던 작업을 저장하고 가장 최근 commit상태로 만든다.
+2. git stash pop 또는 git stash apply : 저장되어 있는 작업중 가장 최근 stash를 가져온다.
+
+출처: https://jeong-pro.tistory.com/107 [기본기를 쌓는 정아마추어 코딩블로그]
+```
+![stash_img](./img/9977FA495B31154F28.png)
+
+```
+1. git stash(=git stash save) : 하던 작업을 저장하고 가장 최근 commit상태로 만든다.
+2. git stash pop 또는 git stash apply : 저장되어 있는 작업중 가장 최근 stash를 가져온다.
+
+출처: https://jeong-pro.tistory.com/107 [기본기를 쌓는 정아마추어 코딩블로그]
+```
