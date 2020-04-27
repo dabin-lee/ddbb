@@ -138,6 +138,7 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 --------------
 ### ★ git stash 만들기
 >    $ git stash  :  아직 마무리하지 않은 작업을 스택에 잠시 저장할 수 있도록 하는 명령어 <br>
+>    $ git stash save 작업명 : #stash에 작업명의 이름으로 임시저장 <br>
 >    $ git stash list : 스택에 있는 stash 목록 확인<br>
 
 ### ★ git stash 적용
@@ -151,7 +152,7 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 >   - --index 옵션을 주어 staged 상태까지 적용. 원래 작업하던 상태로 돌아올 수 있다.
 
 ### ★ git stash 제거
->     $ git stash pop : apply + drop의 형태로, 현재브런치에 저장내용을 복구 , status 결과와 함께 스텍에도 목록 제거
+>     $ git stash pop : apply + drop의 형태로, 현재브런치에 저장내용을 복구 , status 결과와 함께 스텍에도 목록 제거 (마지막으로 저장된 stash작업을 불러오고 리스트에서 삭제)
 
 ### ★ git stash 되돌리기
 >     $git stash show -p | git apply -R : 가장 최근의 stash를 사용하여 패치를 만들고 거꾸로 적용
