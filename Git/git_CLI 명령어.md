@@ -80,6 +80,16 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 
 - - -
 
+## <span style="color:orange">7_1. git 리모트 브랜치 번외 <span>
+>    - 존재하는 모든 리모트 브랜치의 정보를 조회
+>    $git branch -a -> 현재 존재하는 브랜치 정보가 모두 출력<br>
+>    $git branch --remote -> remote에 존재하는 브런치 확인<br>
+>    $git remote update -> 모든 리모트 정보를 업데이트, fetch를 수행<br>
+>    $git remote prune origin -> 현재 자신의 로컬에 있는 리모트 브랜치 정보를 최신으로 업데이트. 새로 추가되었거나 삭제된 리모트 브랜치의 정보들을 최신으로 업데이트할 수 있다. 아래의 커맨드와 동작은 같으나 리모트를 선택하여 반영, 업데이트 할 수 있음.<br>
+>    $git fetch --prune -> 현재 자신의 로컬에 있는 리모트 브랜치 정보를 최신으로 업데이트<br>
+
+- - -
+
 ## <span style="color:orange">8. log <span>
 >    $git log : commit해둔 기록을 조회 (checkout위치에서 보여줌)<br>
 >    $ git log --pretty=oneline : 각 커밋을 한 줄로 표시<br>
