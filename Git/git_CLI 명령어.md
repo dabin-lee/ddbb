@@ -77,6 +77,16 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 >    $git checkout name -> name 브랜치로 이동<br>
 >    $git checkout -b <branch> -> 브랜치 작성과 체크아웃을 한번에 실행<br>
 >    $git branch name -> 현재 시점에서 name브랜치 생성
+>    $git checkout master -> $ git push origin <branch name> 
+- - -
+
+## <span style="color:orange">7_1. git 리모트 브랜치 번외 <span>
+>    - 존재하는 모든 리모트 브랜치의 정보를 조회
+>    $git branch -a -> 현재 존재하는 브랜치 정보가 모두 출력<br>
+>    $git branch --remote -> remote에 존재하는 브런치 확인<br>
+>    $git remote update -> 모든 리모트 정보를 업데이트, fetch를 수행<br>
+>    $git remote prune origin -> 현재 자신의 로컬에 있는 리모트 브랜치 정보를 최신으로 업데이트. 새로 추가되었거나 삭제된 리모트 브랜치의 정보들을 최신으로 업데이트할 수 있다. 아래의 커맨드와 동작은 같으나 리모트를 선택하여 반영, 업데이트 할 수 있음.<br>
+>    $git fetch --prune -> 현재 자신의 로컬에 있는 리모트 브랜치 정보를 최신으로 업데이트<br>
 
 - - -
 
