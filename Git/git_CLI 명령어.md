@@ -94,6 +94,8 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 >    $git merge 브랜치 : 현재 위치한 저장소가 아닌 전체 저장소를 확인<br>
 >    $git log --branches --grahp --oneline : merge된 부분 확인<br>
 >    $git branch -d 브랜치 : merge가 된 branch는 삭제
+>    $git reset --merge ORIG_HEAD : merge취소  (  ORIG_HEAD라고 하는 것은 이전에 작업한 곳의 HEAD이다. 즉, pull이나 merge를 하는 경우에 ORIG_HEAD를 남기게 되는데, pull을 잘못 받거나 merge를 잘못하게 되면 이것을 이용한다. )
+>    $git merge --abort :  merge취소 병합(merge) 시에 충돌(conflict) 등의 문제로 병합이 제대로 이루어지지 않을 경우, 병합 이전의 상태로 돌아간다
 
 - - -
 
