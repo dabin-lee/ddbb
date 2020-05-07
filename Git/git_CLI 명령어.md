@@ -77,7 +77,7 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 >    $git checkout name -> name 브랜치로 이동<br>
 >    $git checkout -b <branch> -> 브랜치 작성과 체크아웃을 한번에 실행<br>
 >    $git branch name -> 현재 시점에서 name브랜치 생성
-
+>    $git checkout master -> $ git push origin <branch name> 
 - - -
 
 ## <span style="color:orange">7_1. git 리모트 브랜치 번외 <span>
