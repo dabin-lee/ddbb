@@ -17,19 +17,19 @@
 |    name    | application-name author description generator keywords viewport |              메타데이터를 위한 이름을 명시함.              |
 
 
-1) 검색 엔진을 위한 키워드(keyword)를 정의하는 예제
+1) 검색 엔진을 위한 키워드(keyword)를 정의하는 예제<br>
 `<meta name="keyword" content="HTML, meta, tag, element, reference">`
 
-2) 웹 페이지에 대한 설명(description)을 정의하는 예제
+2) 웹 페이지에 대한 설명(description)을 정의하는 예제<br>
 `<meta name="description" content="HTML meta tag page">`
 
-3) 문서의 저자(author)를 정의하는 예제
+3) 문서의 저자(author)를 정의하는 예제<br>
 `<meta name="author" content="TCPSchool">`
 
-4) 5초 뒤에 다른 페이지로 리다이렉트(redirect)시키는 예제
+4) 5초 뒤에 다른 페이지로 리다이렉트(redirect)시키는 예제<br>
 `<meta http-equiv="refresh" content="5;url=http://www.tcpschool.com">`
 
-5) 모든 장치에서 웹 사이트가 잘 보이도록 뷰포트(viewport)를 설정하는 예제
+5) 모든 장치에서 웹 사이트가 잘 보이도록 뷰포트(viewport)를 설정하는 예제<br>
 `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
 
 #### <head> 안에 배치할 수 있는 요소
