@@ -102,8 +102,8 @@
 
 **[10. 문서 meta 요소](https://github.com/dabin-lee/ddbb/html_design/elementfile/11_meta.md)**
 
-    - What is CSS-in-JS?
-    - 구현방식
-    - css-in-js 의 장점
-    - css-in-js 라이브러리 종류
+    - meta 태그?
+    - meta 속성
+    - 속성별 예제
+    - <head> 안에 배치할 수 있는 요소
 ---
