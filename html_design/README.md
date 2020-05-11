@@ -1,6 +1,6 @@
 ## 구조 디자인 HTML
 
-**[1. HTML 이란?](#elementfile/1_HTML_introduce.md)**
+**[1. HTML 이란?](https://github.com/dabin-lee/ddbb/blob/master/html_design/elementfile/1_HTML_introduce.md)**
 
     - 시멘틱 마크업(Semantic Markup)
     - HTML 문서 작성을 위한 기본 문법
