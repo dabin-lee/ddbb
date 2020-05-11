@@ -77,7 +77,7 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 >    $git checkout name -> name 브랜치로 이동<br>
 >    $git checkout -b <branch> -> 브랜치 작성과 체크아웃을 한번에 실행<br>
 >    $git branch name -> 현재 시점에서 name브랜치 생성
->    $git checkout master -> $ git push origin <branch name> 
+>    $git checkout master -> $ git push origin <branch name>
 - - -
 
 ## <span style="color:orange">7_1. git 리모트 브랜치 번외 <span>
@@ -171,4 +171,16 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 >     $git stash show -p [stash 이름] | git apply -R
  --------------
 
+
+
+--------------
+### ★ git 충돌
+>    $ git push -f  :  아직 마무리하지 않은 작업을 스택에 잠시 저장할 수 있도록 하는 명령어 <br>
+>    $ git push --force 작업명 : #stash에 작업명의 이름으로 임시저장 <br>
+>    $ git push origin +`<branch_name>` : 스택에 있는 stash 목록 확인<br>
+
+### ★ git stash 적용
+>     * git stash apply : 가장 최근의 stash 적용
+>     $ git stash apply [stash 이름] :  [stash 이름]에 해당하는 stash 적용
+>     $ git stash apply --index :  [stash 이름]에 해당하는 stash 적용
 
