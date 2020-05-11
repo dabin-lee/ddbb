@@ -9,7 +9,7 @@
     - HTML 문서 작성을 위한 DTD
 ---
 
-**[2. HTML 요소](https://github.com/dabin-lee/ddbb/html_design/elementfile/2_HTML_Element.md)**
+**[2. HTML 요소](https://github.com/dabin-lee/ddbb/blob/master/html_design/elementfile/2_HTML_Element.md)**
 
     - 언어 설정
     - HTML 주요 요소's
@@ -20,7 +20,7 @@
     - 어휘(Phrasing) 요소
 ---
 
-**[3. Section / Main 요소](https://github.com/dabin-lee/ddbb/html_design/elementfile/3_section&main.md)**
+**[3. Section / Main 요소](https://github.com/dabin-lee/ddbb/blob/master/html_design/elementfile/3_section&main.md)**
 
     - <section>
     - <article>
@@ -32,7 +32,7 @@
 
 ---
 
-**[4. Containers 요소](https://github.com/dabin-lee/ddbb/html_design/elementfile/4_containers.md)**
+**[4. Containers 요소](https://github.com/dabin-lee/ddbb/blob/master/html_design/elementfile/4_containers.md)**
 
     - <div>
     - <span>
@@ -41,7 +41,7 @@
 
 ---
 
-**[5. Text level 요소](https://github.com/dabin-lee/ddbb/html_design/elementfile/5_textlevel.md)**
+**[5. Text level 요소](https://github.com/dabin-lee/ddbb/blob/master/html_design/elementfile/5_textlevel.md)**
 
     - <sup>
     - <sub>
@@ -53,7 +53,7 @@
 
 ---
 
-**[6. Grouping & interactive 요소](https://github.com/dabin-lee/ddbb/html_design/elementfile/6_grouping.md)**
+**[6. Grouping & interactive 요소](https://github.com/dabin-lee/ddbb/blob/master/html_design/elementfile/6_grouping.md)**
 
     - Grouping 요소
       - <address>
@@ -64,7 +64,7 @@
       - <summary>
 ---
 
-**[7. embeded 요소](https://github.com/dabin-lee/ddbb/html_design/elementfile/7_Embeded.md)**
+**[7. embeded 요소](https://github.com/dabin-lee/ddbb/blob/master/html_design/elementfile/7_Embeded.md)**
 
     - <area>
     - <audio>
@@ -83,7 +83,7 @@
 ---
 
 
-**[8. scripting 요소](https://github.com/dabin-lee/ddbb/html_design/elementfile/9_interactive.md)**
+**[8. scripting 요소](https://github.com/dabin-lee/ddbb/blob/master/html_design/elementfile/9_interactive.md)**
 
     - <script></script>
     - script 속성
@@ -91,7 +91,7 @@
     - script 태그를 놓는 위치
 ---
 
-**[9. user interaction 속성](https://github.com/dabin-lee/ddbb/html_design/elementfile/10_UI.md)**
+**[9. user interaction 속성](https://github.com/dabin-lee/ddbb/blob/master/html_design/elementfile/10_UI.md)**
 
     - hidden에 관하여
     - tabindex
@@ -100,7 +100,7 @@
     - draggable
 ---
 
-**[10. 문서 meta 요소](https://github.com/dabin-lee/ddbb/html_design/elementfile/11_meta.md)**
+**[10. 문서 meta 요소](https://github.com/dabin-lee/ddbb/blob/master/html_design/elementfile/11_meta.md)**
 
     - meta 태그?
     - meta 속성
