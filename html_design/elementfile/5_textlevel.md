@@ -21,7 +21,7 @@
 - 요소 위에 마우스를 올려놓으면 title 속성으로 명시한 단어의 원형이 나타납니다.
 - 속성 - title : 약어 전체의 의미를 지정합니다. (요소에 마우스를 올리면 툴팁으로 나옴)
 - ex) `<p><abbr title="International Olympic Committee">IOC</abbr> (국제 올림픽 위원회)는 스위스 로잔에 본부를 둔 국제 스포츠 기구이다.</p>`
-- ![img_1](images/abbr.png)
+- ![img_1](../images/abbr.png)
 
 #### `<s></s>`
 -  태그는 텍스트 한가운데 라인(line)을 추가하여 더 이상 정확하지 않거나 관련이 없는 텍스트를 표현할 때 사용합니다.
