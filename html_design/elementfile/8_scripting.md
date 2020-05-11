@@ -68,7 +68,7 @@ js 미실행시 : 자바스크립트를 꺼두셨군요.
 ---
 
 # script 태그를 놓는 위치
-![scriptimg](../images/script.png)
+![scriptimg](../images/script.png)<br>
 [브라우저 동작 방식]
 1. html을 읽음 ->
 2. html 파싱 ->

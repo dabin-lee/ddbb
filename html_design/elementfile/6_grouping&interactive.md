@@ -50,7 +50,8 @@ pre 요소 내의 텍스트는
 - details 요소로 제공되는 세부사항에 대한 요약 또는 제목을 의미합니다.
 - summary> 요소는 반드시 <details> 요소의 첫 번째 자식 요소여야 합니다.
 - summary의 제목을 클릭함으로써 details의 요소를 보일 수도 숨길 수도 있습니다.
-![summary](../images/summary.png)
+    <br>
+![summary](../images/summary.png)<br>
 ![summary](../images/summary2.png)
 
 
