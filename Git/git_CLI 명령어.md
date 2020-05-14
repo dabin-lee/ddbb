@@ -193,8 +193,9 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 >     $  git push -f origin [브랜치명] : 돌아간 시장을 강제로 push 
 
 --------------
+
 #### HEAD의 여러 표현 방법
->    HEAD^[n] : n번째 부모 버전  (the parent of HEAD), 생략시 1
->    HEAD~[n] : n번째 부모의 부모. (the first parent of the first parent or the grandparent)
->    HEAD~ 와 HEAD^ 는 같은 대상이지만 특정숫자들을 입력하면 대상이 달라진다. (HEAD^4 와 HEAD~4 는 다르다.) 하지만 다음 예제는 같은 커밋개체을 가르킨다.
+>    HEAD^[n] : n번째 부모 버전  (the parent of HEAD), 생략시 1<br>
+>    HEAD~[n] : n번째 부모의 부모. (the first parent of the first parent or the grandparent)<br>
+>    HEAD~ 와 HEAD^ 는 같은 대상이지만 특정숫자들을 입력하면 대상이 달라진다. (HEAD^4 와 HEAD~4 는 다르다.) 하지만 다음 예제는 같은 커밋개체을 가르킨다.<br>
 >    HEAD^^^ == HEAD~3    (HEAD^^^ 가 첫번째부모의 첫번째부모의 첫번째부모 노드를 뜻하므로 같은 값을 가르킨다.) 
