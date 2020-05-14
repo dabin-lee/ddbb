@@ -169,18 +169,25 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 ### ★ git stash 되돌리기
 >     $git stash show -p | git apply -R : 가장 최근의 stash를 사용하여 패치를 만들고 거꾸로 적용
 >     $git stash show -p [stash 이름] | git apply -R
- --------------
-
-
-
 --------------
 ### ★ git 충돌
 >    $ git push -f  :  아직 마무리하지 않은 작업을 스택에 잠시 저장할 수 있도록 하는 명령어 <br>
 >    $ git push --force 작업명 : #stash에 작업명의 이름으로 임시저장 <br>
 >    $ git push origin +`<branch_name>` : 스택에 있는 stash 목록 확인<br>
 
-### ★ git stash 적용
->     * git stash apply : 가장 최근의 stash 적용
->     $ git stash apply [stash 이름] :  [stash 이름]에 해당하는 stash 적용
->     $ git stash apply --index :  [stash 이름]에 해당하는 stash 적용
+--------------
+### ★ git rebase -  merge를 사용하는 것보다 rebase를 사용하는 것이 로그를 관리할 때 훨씬 효과적입니다.
+>     - git merge는 header와 branch를 merge시키고, rebase는 commit을 재정렬한다. 
+      - rebase를 하게 되면 커밋도 새로 쓰고 정렬도 새로 하기 때문에 기존 커밋트리가 완전히 달라진다. 
+      
+--------------
 
+### ★ git reset과 revert 
+>     - 작업을 진행하다가 실수로 중요한 파일을 삭제했거나 제대로 병합이 안됐을 경우, 잘 작동이 되던 이전 버전으로 돌아가야 합니다.
+이것이 바로 버전 관리를 하는 이유이며, 이 때 사용하는 명령어가 git reset과 git revert라는 명령어입니다.
+
+
+--------------
+### ★ git reset 취소 - reset을 한 상태에서 다시 최근 소스로 돌아오기 위해서 사용
+>     $  git reflog : 이전까지 작업들 reflog로 확인 몇번째 HEAD로 이동할지 확인
+>     $  git reset --hard HEAD@{1} : HEAD@{1} 로 이동 
