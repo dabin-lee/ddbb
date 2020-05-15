@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <button>add one item</button>
+
+    <div class="one">one
+		<div class="two">two
+			<div class="three">three
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+    var button = document.querySelector('button');
+    button.addEventListener('click', addItem);
+
+    function addItem(event){
+        console.log(event);
+    }
+
+    // event Bubbling ex
+    // var divs = document.querySelectorAll('div');
+    // divs.forEach(function(div) {
+    //     div.addEventListener('click', logEvent);
+    // });
+
+    // function logEvent(event) {
+    //     console.log(event.currentTarget.className);
+    // }
+
+
+    //event capture
+    // var divs = document.querySelectorAll('div');
+    // divs.forEach(function(div) {
+    //     div.addEventListener('click', logEvent, {
+    //         capture: true // default 값은 false입니다.
+    //     });
+    // });
+
+    // function logEvent(event) {
+    //     console.log(event.currentTarget.className);
+    // }
+
+
+    // event.stopPropagation
+    var divs = document.querySelectorAll('div');
+    divs.forEach(function(div) {
+        div.addEventListener('click', logEvent);
+    });
+
+    function logEvent(event) {
+        event.stopPropagation();
+        console.log(event.currentTarget.className);
+    }
+</script>
+</html>
+
+<!--
+    addEventListener('이벤트종류', '함수이름');
+    addEventListener() 웹 API는 웹 개발자들이 화면에 동적인 기능을 추가하기 위해 자연스럽게 접하게 되는 기본적인 기능입니다.
+
+
+    - 버튼을 클릭하고 나면 addItem 함수가 실행되고 addItem 함수에 event 인자가 넘어옵니다.
+
+    - 왜 3개가 다 출력?  그 이유는 브라우저가 이벤트를 감지하는 방식 때문입니다. 주의해야 할 점은 각 태그마다 이벤트가 등록되어 있기 때문에 상위 요소로 이벤트가 전달되는 것을 확인할 수 있습니다.
+    - [eventcapture]
+ -->

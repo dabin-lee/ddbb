@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <ul class="itemList">
+        <li>
+            <input type="checkbox" id="Item1">
+            <label for="Item1">Event bubbling study</label>
+        </li>
+        <li>
+            <input type="checkbox" id="Item2">
+            <label for="Item2">Event capture study</label>
+        </li>
+    </ul>
+</body>
+<script>
+    var inputs = document.querySelectorAll('input');
+    inputs.forEach(function(input){
+        input.addEventListener('click', function(event){
+            alert('clicked');
+        });
+
+    });
+
+// var itemList = document.querySelector('.itemList');
+
+// var li = document.createElement('li');
+// var input = document.createElement('input');
+// var label = document.createElement('label');
+// var labelText = document.createTextNode('이벤트 위임 학습');
+
+// input.setAttribute('type', 'checkbox');
+// input.setAttribute('id', 'Item3');
+// label.setAttribute('for', 'Item3');
+// label.appendChild(labelText);
+// li.appendChild(input);
+// li.appendChild(label);
+// itemList.appendChild(li);
+
+var itemList = document.querySelector('.itemList');
+itemList.addEventListener('click', function(event){
+    alert('clicked');
+});
+
+</script>
+
+</html>
