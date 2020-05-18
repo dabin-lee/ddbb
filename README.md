@@ -8,7 +8,7 @@
 
 ---
 
-**[3. HTML Convention ](https://github.com/dabin-lee/ddbb/tree/master/html_design)**
+**[3. HTML Convention ](https://github.com/dabin-lee/ddbb/tree/master/HTML_Convention)**
 
 ---
 
