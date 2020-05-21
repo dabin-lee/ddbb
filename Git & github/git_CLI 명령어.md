@@ -219,3 +219,25 @@ git reflog
 
 git reset HEAD@{1}
 
+
+
+--------------
+
+#### reset 옵션
+
+>>git reset --hard 커밋ID
+
+모든 내용을 지우고 되돌아감(초기화)
+
+>>git reset --soft 커밋ID
+
+커밋은 되돌렸지만 코드의 내용은 변경되지 않음
+
+>>git reset --mixed 커밋ID
+
+옵션을 설정하지 않았을때 기본값
+
+커밋 되돌렸고, 변경된 내용이 남아있어서 다시 추가할수 있음 
+
+ 
+
