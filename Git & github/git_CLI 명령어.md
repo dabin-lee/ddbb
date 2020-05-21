@@ -199,3 +199,23 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 >    HEAD~[n] : n번째 부모의 부모. (the first parent of the first parent or the grandparent)<br>
 >    HEAD~ 와 HEAD^ 는 같은 대상이지만 특정숫자들을 입력하면 대상이 달라진다. (HEAD^4 와 HEAD~4 는 다르다.) 하지만 다음 예제는 같은 커밋개체을 가르킨다.<br>
 >    HEAD^^^ == HEAD~3    (HEAD^^^ 가 첫번째부모의 첫번째부모의 첫번째부모 노드를 뜻하므로 같은 값을 가르킨다.) 
+
+--------------
+
+####  git reset --hard HEAD^
+>    등을 날릴 때가 있는데, 실행하고 나서 앗차!! 할 때가 있다.
+
+ 
+
+이럴 땐 침착하게 다음과 같이 커맨드를 날리자.
+
+git reflog
+
+ 
+
+무언가 history가 쫘악 뜬다. 여기서 내용을 보면 방금 날린 git reset에 대한 내용이 있다.
+
+그럼 바로 그 전에 걸로 돌아가보자.
+
+git reset HEAD@{1}
+
