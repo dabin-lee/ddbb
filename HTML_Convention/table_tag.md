@@ -72,3 +72,8 @@ tbody의 데이터 양이 아주 많고 동시에 이 데이터에 대한 헤딩
 - summary는 표의 전체적인 내용을 요약해줄 때 사용합니다. html5 에서는 사용하지 않습니다.
 
 ### [scope="rowgroup" / scope="colgroup" ]
+
+
+
+### [table summary / caption]
+- summary는 col또는 row에 나온 순으로 넣어주고 caption은 table의 제목을 넣어준다. 
