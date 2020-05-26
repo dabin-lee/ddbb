@@ -53,7 +53,7 @@
 
 ---
 
-**[6. Grouping & interactive 요소](https://github.com/dabin-lee/ddbb/blob/master/html_design/elementfile/6_grouping.md)**
+**[6. Grouping & interactive 요소](https://github.com/dabin-lee/ddbb/blob/master/html_design/elementfile/6_grouping&interactive.md)**
 
     - Grouping 요소
       - <address>
