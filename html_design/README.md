@@ -20,7 +20,7 @@
     - 어휘(Phrasing) 요소
 ---
 
-**[3. Section / Main 요소](https://github.com/dabin-lee/ddbb/html_design/elementfile/3_section&main.md)**
+**[3. Section / Main 요소](https://github.com/dabin-lee/ddbb/html_design/elementfile/3_section_main.md)**
 
     - <section>
     - <article>
