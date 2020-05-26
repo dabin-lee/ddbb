@@ -83,7 +83,7 @@
 ---
 
 
-**[8. scripting 요소](https://github.com/dabin-lee/ddbb/blob/master/html_design/elementfile/9_interactive.md)**
+**[8. scripting 요소](https://github.com/dabin-lee/ddbb/blob/master/html_design/elementfile/8_scripting.md)**
 
     - <script></script>
     - script 속성
@@ -91,7 +91,7 @@
     - script 태그를 놓는 위치
 ---
 
-**[9. user interaction 속성](https://github.com/dabin-lee/ddbb/blob/master/html_design/elementfile/10_UI.md)**
+**[9. user interaction 속성](https://github.com/dabin-lee/ddbb/blob/master/html_design/elementfile/9_UI.md)**
 
     - hidden에 관하여
     - tabindex
