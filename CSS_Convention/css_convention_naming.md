@@ -28,7 +28,8 @@
         ex) id="btnSearch" ( x ) id="btnGnbSearch" ( o )
     * class는 요소 기능을 표현하도록 naming한다.
     * id는 문서 내 한 번만 사용되며, id, class naming은 가급적 같지 않게 naming 한다.
-
+    
+참고 : https://m.blog.naver.com/kty4523/221586270676
 
 # GOOGLE 스타일 규칙
 1. CSS 네이밍
@@ -60,3 +61,12 @@
 
 
 출처 : https://code-study.tistory.com/17
+
+
+| 상태별 접미사 |                                     |
+|---------------|-------------------------------------|
+| 분류          | suffix                              |
+| 상태변화      | _on / _off / _over / _hit / _focus  |
+| 위치변화      | _top / _mid / _bot / _left / _right |
+| 순서변화      | _fst / _lst                         |
+| 이전/다음     | _prev / _next                       |
