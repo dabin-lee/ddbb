@@ -9,3 +9,9 @@
 | max-height  | 뷰포트 최대 세로 너비(이하)                                            |
 | min-height  | 뷰포트 최소 세로 너비(이상)                                            |
 | orientation | 뷰포트 방향 (portrait), (landscape)                                    |
+
+
+
+
+portrait -> /* 세로가 길어지는 상태  */
+landscape -> /* 가로가 세로보다 길어지는 상태로 변환*/
