@@ -31,3 +31,4 @@ Gulp (걸프):  반복적인 개발 작업을 자동화하는 빌드 도구
 babel(바벨): ES6코드를 ES5코드로 변환해주는 트랜스컴파일러
 
 https://lucidmaj7.tistory.com/122
+
