@@ -104,7 +104,9 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 >    $git merge 브랜치 : 현재 위치한 저장소가 아닌 전체 저장소를 확인<br>
 >    $git log --branches --grahp --oneline : merge된 부분 확인<br>
 >    $git branch -d 브랜치 : merge가 된 branch는 삭제
->    $git reset --merge ORIG_HEAD : merge취소  (  ORIG_HEAD라고 하는 것은 이전에 작업한 곳의 HEAD이다. 즉, pull이나 merge를 하는 경우에 ORIG_HEAD를 남기게 되는데, pull을 잘못 받거나 merge를 잘못하게 되면 이것을 이용한다. )
+>    $git reset --merge ORIG_HEAD : merge취소  <br>
+ (  ORIG_HEAD라고 하는 것은 이전에 작업한 곳의 HEAD이다. <br>
+ 즉, pull이나 merge를 하는 경우에 ORIG_HEAD를 남기게 되는데, pull을 잘못 받거나 merge를 잘못하게 되면 이것을 이용한다. ) <br>
 >    $git merge --abort :  merge취소 병합(merge) 시에 충돌(conflict) 등의 문제로 병합이 제대로 이루어지지 않을 경우, 병합 이전의 상태로 돌아간다
 
 - - -
@@ -229,3 +231,25 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 
  
 
+
+```
+#### 단골에러
+
+```
+To https://github.com/hahwul/a2sv.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/hahwul/a2sv.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+실제 에러가 발생하는 부분을 고칠수도 있지만 임시 방편으로 "+" 를 이용하여 해결이 가능합니다.
+
+아래와 같이 강제로 push 를 진행하게 되면 에러 상관없이 강제로 Push 하게 되어 이슈를 넘어갈 수 있습니다.
+[물론 임시 방편입니다.]
+
+기존명령:  HaHwul #> git push -u origin master
+강제명령:  HaHwul #> git push -u origin +master
+```
