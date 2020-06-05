@@ -33,4 +33,38 @@
 출처: https://jsunnylab.tistory.com/38 [Jsunny Lab]
 
 
+#### name 과 value의 차이점
+- name은 서버전송을 위해 꼭 필요한 필수 값
+- value는 폼 필드에 기본적으로 입력을 해주는 값.
+-
 
+
+#### label의 관해서
+- label태그?
+- label은 for속성과 id속성을 명시함으로써 연결해주는 방식을 의미한다.
+- 스크린 리더기와 같은 통신 기기가 label태그를 통해 연결된 input 태그를 인식한다.
+- 명시적, 암시적 label
+```
+// 명시적
+<label for="name">이름</label>
+<input type="text" id="name"/>
+
+// 암시적
+<label>
+	이름 <input type="text" id="name"/>
+</label>
+
+```
+https://mygumi.tistory.com/359
+
+
+
+https://juyeol.tistory.com/25
+
+
+
+
+                <!--
+                    button type="button" : 일반 버튼 사용자 ui
+                    button type="submit" : 데이터 서버 전송을 위함
+                -->

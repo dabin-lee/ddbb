@@ -1,22 +1,23 @@
-// 함수먼저
+const a = new Object();
+console.log(a, typeof a);
 
-function hello1(){
-    console.log('hello1');
+const b = new Object(true);
+console.log(b, typeof b);
+
+const c = new Object({ name : 'Mark' });
+console.log(c, typeof c);
+
+
+
+// prototype
+
+function Person(name, age){
+    this.name = name;
+    this.age = age;
+    this.hello = function(){
+        console.log('hello', this.name, this.age);
+    };
 }
 
-hello1();
-
-// 함수 호출 먼저
-hello2();
-
-function hello2(){
-    console.log('hello2');
-}
-
-// 아래있는 선언만(을) 끌어올리는 현상을 호이스팅이라고 한다. - hoisting
-
-age = 5;
-
-var age;
-
-// 선언만 올라가는 것
+const p = new Person('Mark', 33);
+consoel.log(p.toString());
