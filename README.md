@@ -12,9 +12,13 @@
 
 ---
 
-**[4. CSS Convention](https://github.com/dabin-lee/ddbb/tree/master/CSS_Convention)**
+**[4. CLASS 이름짖기 ](https://github.com/dabin-lee/ddbb/tree/master/CSS_metodologia)**
 
 ---
-**[5. Git ](https://github.com/dabin-lee/ddbb/tree/master/Git)**
+
+**[5. CSS Convention](https://github.com/dabin-lee/ddbb/tree/master/CSS_Convention)**
+
+---
+**[6. Git ](https://github.com/dabin-lee/ddbb/tree/master/Git)**
 
 ---
