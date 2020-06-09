@@ -1,7 +1,7 @@
 # 접근성
 
 #### button, a, input 태그
-`<a>`요소
+`<a>`요소g
 - URI를 ‘연결‘하기 위한 버튼으로서 `<a href="#url">` 형식으로 마크업 합니다.
 
 `<button>`요소
@@ -55,16 +55,15 @@
 </label>
 
 ```
+
+
 https://mygumi.tistory.com/359
-
-
-
 https://juyeol.tistory.com/25
 
 
 
 
-                <!--
-                    button type="button" : 일반 버튼 사용자 ui
-                    button type="submit" : 데이터 서버 전송을 위함
-                -->
+<!--
+    button type="button" : 일반 버튼 사용자 ui
+    button type="submit" : 데이터 서버 전송을 위함
+-->
