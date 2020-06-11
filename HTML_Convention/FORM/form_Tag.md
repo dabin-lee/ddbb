@@ -7,20 +7,26 @@ form 태그는 사용자가 입력한 데이터를 수집하기 위해 사용되
 |   method  | get / post |   입력 데이터(form data) 전달 방식 지정  |
 
 GET과 POST는 HTTP 프로토콜을 이용해서 사용자 입력 데이터를 서버에 전달하는 방식을 나타내며 HTTP request method라 한다
+1) action
+  * action 애트리뷰트는 서버 사이드 폼 핸들러이나 필수 선언 애트리뷰트이기 때문에, 마크업 단계에서 다음과 같이 선언한다.
+    ```
+    <form action="">
+    </form>
+    ```
+
+2) method
+   * GET
+       * GET 방식은 전송 URL에 입력 데이터를 쿼리스트링으로 보내는 방식이다. <br> 예) http://jsonplaceholder.typicode.com/posts?userId=1&id=1
+       * 전송 URL 바로 뒤에 ‘?’를 통해 데이터의 시작을 알려주고, key-value형태의 데이터를 추가한다. 1개 이상의 전송 데이터는 ‘&’로 구분한다.
+       * URL에 전송 데이터가 모두 노출되기 때문에 보안에 문제가 있으며 전송할 수 있는 데이터의 한계가 있다. (최대 255자).
+       * REST API에서 GET 메소드는 모든 또는 특정 리소스의 조회를 요청한다.
 
 
-* GET
-    * GET 방식은 전송 URL에 입력 데이터를 쿼리스트링으로 보내는 방식이다. <br> 예) http://jsonplaceholder.typicode.com/posts?userId=1&id=1
-    * 전송 URL 바로 뒤에 ‘?’를 통해 데이터의 시작을 알려주고, key-value형태의 데이터를 추가한다. 1개 이상의 전송 데이터는 ‘&’로 구분한다.
-    * URL에 전송 데이터가 모두 노출되기 때문에 보안에 문제가 있으며 전송할 수 있는 데이터의 한계가 있다. (최대 255자).
-    * REST API에서 GET 메소드는 모든 또는 특정 리소스의 조회를 요청한다.
-
-
-* POST
-    * POST 방식은 Request Body에 담아 보내는 방식이다.<br>
-     예) http://jsonplaceholder.typicode.com/posts
-    * URL에 전송 데이터가 모두 노출되지 않지만 GET에 비해 속도가 느리다.
-    * REST API에서 POST 메소드는 특정 리소스의 생성을 요청한다.
+   * POST
+       * POST 방식은 Request Body에 담아 보내는 방식이다.<br>
+        예) http://jsonplaceholder.typicode.com/posts
+       * URL에 전송 데이터가 모두 노출되지 않지만 GET에 비해 속도가 느리다.
+       * REST API에서 POST 메소드는 특정 리소스의 생성을 요청한다.
 
 ```
 <!DOCTYPE html>
@@ -33,8 +39,9 @@ GET과 POST는 HTTP 프로토콜을 이용해서 사용자 입력 데이터를 �
     </form>
   </body>
 </html>
-```
 submit button이 클릭되면 input 태그에 입력된 데이터가 form 태그의 method 어트리뷰트에 지정된 방식으로 action 어트리뷰트에 지정된 서버측의 처리 로직에 전달된다.
+
+```
 <br>
 <br>
 <br>

@@ -179,20 +179,20 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 
 --------------
 ### ★20. git rebase -  merge를 사용하는 것보다 rebase를 사용하는 것이 로그를 관리할 때 훨씬 효과적입니다.
->     - git merge는 header와 branch를 merge시키고, rebase는 commit을 재정렬한다. 
->     - rebase를 하게 되면 커밋도 새로 쓰고 정렬도 새로 하기 때문에 기존 커밋트리가 완전히 달라진다. 
-      
+>     - git merge는 header와 branch를 merge시키고, rebase는 commit을 재정렬한다.
+>     - rebase를 하게 되면 커밋도 새로 쓰고 정렬도 새로 하기 때문에 기존 커밋트리가 완전히 달라진다.
+
 --------------
 
-### ★21. git reset과 revert 
+### ★21. git reset과 revert
 >     - 작업을 진행하다가 실수로 중요한 파일을 삭제했거나 제대로 병합이 안됐을 경우, 잘 작동이 되던 이전 버전으로 돌아가야 합니다. 이것이 바로 버전 관리를 하는 이유이며, 이 때 사용하는 명령어가 git reset과 git revert라는 명령어입니다.
 
 
 --------------
 ### ★21_1. git reset 취소 - reset을 한 상태에서 다시 최근 소스로 돌아오기 위해서 사용
 >     $  git reflog : 이전까지 작업들 reflog로 확인 몇번째 HEAD로 이동할지 확인
->     $  git reset --hard HEAD@{1} : HEAD@{1} 로 이동 
->     $  git push -f origin [브랜치명] : 돌아간 시장을 강제로 push 
+>     $  git reset --hard HEAD@{1} : HEAD@{1} 로 이동
+>     $  git push -f origin [브랜치명] : 돌아간 시장을 강제로 push
 
 --------------
 
@@ -200,7 +200,7 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 >    HEAD^[n] : n번째 부모 버전  (the parent of HEAD), 생략시 1<br>
 >    HEAD~[n] : n번째 부모의 부모. (the first parent of the first parent or the grandparent)<br>
 >    HEAD~ 와 HEAD^ 는 같은 대상이지만 특정숫자들을 입력하면 대상이 달라진다. (HEAD^4 와 HEAD~4 는 다르다.) 하지만 다음 예제는 같은 커밋개체을 가르킨다.<br>
->    HEAD^^^ == HEAD~3    (HEAD^^^ 가 첫번째부모의 첫번째부모의 첫번째부모 노드를 뜻하므로 같은 값을 가르킨다.) 
+>    HEAD^^^ == HEAD~3    (HEAD^^^ 가 첫번째부모의 첫번째부모의 첫번째부모 노드를 뜻하므로 같은 값을 가르킨다.)
 
 --------------
 
@@ -215,41 +215,27 @@ push는 마지막으로 커밋한 사항을 git repository 에 올리겠다는 �
 
 #### reset 옵션
 
->>git reset --hard 커밋ID
+>    git reset --hard 커밋ID : 모든 내용을 지우고 되돌아감(초기화)
+>    git reset --soft 커밋ID : 커밋은 되돌렸지만 코드의 내용은 변경되지 않음
+>    git reset --mixed 커밋ID : 옵션을 설정하지 않았을때 기본값 (커밋 되돌렸고, 변경된 내용이 남아있어서 다시 추가할수 있음 )
 
-모든 내용을 지우고 되돌아감(초기화)
+ --------------
 
->>git reset --soft 커밋ID
-
-커밋은 되돌렸지만 코드의 내용은 변경되지 않음
-
->>git reset --mixed 커밋ID
-
-옵션을 설정하지 않았을때 기본값
-
-커밋 되돌렸고, 변경된 내용이 남아있어서 다시 추가할수 있음 
-
- 
-
-
-```
 #### 단골에러
 
 ```
 To https://github.com/hahwul/a2sv.git
  ! [rejected]        master -> master (non-fast-forward)
-error: failed to push some refs to 'https://github.com/hahwul/a2sv.git'
+error: failed to push some refs to 'https://github.com/dabin-lee/ddbb'
 hint: Updates were rejected because the tip of your current branch is behind
 hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
 hint: before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
 
+- 실제 에러가 발생하는 부분을 고칠수도 있지만 임시 방편으로 "+" 를 이용하여 해결이 가능합니다.
+- 아래와 같이 강제로 push 를 진행하게 되면 에러 상관없이 강제로 Push 하게 되어 이슈를 넘어갈 수 있습니다. [물론 임시 방편입니다.]
 
-실제 에러가 발생하는 부분을 고칠수도 있지만 임시 방편으로 "+" 를 이용하여 해결이 가능합니다.
-
-아래와 같이 강제로 push 를 진행하게 되면 에러 상관없이 강제로 Push 하게 되어 이슈를 넘어갈 수 있습니다.
-[물론 임시 방편입니다.]
-
-기존명령:  HaHwul #> git push -u origin master
-강제명령:  HaHwul #> git push -u origin +master
+>    기존명령:  git push -u origin master
+>    강제명령:  git push -u origin +master
 ```
