@@ -56,6 +56,9 @@
 - figure + figurecaption : `<figure> 요소는 독립적인 콘텐츠를 표현합니다. <figcaption> 요소를 사용해 설명을 붙일 수 있습니다. 피규어, 설명, 콘텐츠는 하나의 단위로 참조됩니다.`
 - `<figcaption> 요소는 부모 <figure> 요소가 포함하는 다른 콘텐츠에 대한 설명 혹은 범례를 나타냅니다.`
 - :heavy_exclamation_mark: 이미지만 사용될 경우는 img 요소만으로 구성하여도 되며, 이미지 + 캡션과 같은 구조일 경우에는 figure, figcaption 요소와 함께 사용하는 것이 좋습니다.
+- figcaption은 figure 요소에 캡션을 만듭니다. figure 요소의 자식 요소이며, 제일 처음 또는 제일 마지막에 위치시킵니다.
+
+
 
 #### (Quotation) (cite) (Line Break)
 - `<blockquote> 요소는 안쪽의 텍스트가 긴 인용문임을 나타냅니다. 인용문의 출처 URL은 cite 특성으로, 출처 텍스트는 <cite> 요소로 제공할 수 있습니다.`
