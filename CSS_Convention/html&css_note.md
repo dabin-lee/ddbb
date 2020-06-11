@@ -87,12 +87,12 @@
 |    전체선택    | *                 |
 
 
-<<<<<<< HEAD:CSS_Convention/html&css유의사항.md
 ## 그외
  * 링크에 연관된 title 잘써주세요
  *  `<div class="summary__title">How people build&nbsp;software</div>`
  - &nbsp;를 띄어쓰기 없이 쓰므로써 build&nbsp;software 이 부분을 한 문장으로 인식함
+ 
 =======
+
 ## title
  * 링크에 연관된 title 잘써주세요
->>>>>>> 6101260520b31714edb78f47dda7967d1d4403ba:CSS_Convention/html&css_note.md
