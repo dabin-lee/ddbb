@@ -10,7 +10,8 @@
 -  type을 명시하지 않으면 어떤 브라우저는 Form Submit 기능을 실행하기 때문에 반드시 type 속성을 button으로 지정해 주어야 합니다.
 
 `<input>`요소
-- 사용자의 입력을 서버로 ‘전송‘하기 위한 버튼으로서 `<input type="submit">`, `<button type="submit">` 엘리먼트로 마크업 합니다.
+- 사용자의 입력을 서버로 '전송' 하기 위한 버튼으로서 `<input type="submit">`, `<button type="submit">` 엘리먼트로 마크업 합니다.
+
 
 
 
@@ -36,7 +37,6 @@
 #### name 과 value의 차이점
 - name은 서버전송을 위해 꼭 필요한 필수 값
 - value는 폼 필드에 기본적으로 입력을 해주는 값.
--
 
 
 #### label의 관해서
@@ -56,9 +56,13 @@
 
 ```
 
+#### form
 
-https://mygumi.tistory.com/359
-https://juyeol.tistory.com/25
+- input 요소를 특정 페이지로 전송하는 역할
+- form안에는 하나의 submit만 존재
+- 양식과 button이 모두 form 안에 포함되어야 한다.
+
+####  link와 button
 
 
 
@@ -67,3 +71,7 @@ https://juyeol.tistory.com/25
     button type="button" : 일반 버튼 사용자 ui
     button type="submit" : 데이터 서버 전송을 위함
 -->
+
+https://mygumi.tistory.com/359
+https://juyeol.tistory.com/25
+

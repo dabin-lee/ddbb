@@ -19,7 +19,8 @@
 * li하나하나에 클래스 주지 말기
 * table은 ul li로 사용하기
 * dl, dd, dt는 사용하지 않기
-* 확장성을 위해 ul.~ li.~ 쓰지 않기
+* 확장성을 위해 CSS에 HTML 태그를 적지말자 div.classname{...} or p.classname{...}
+* 의존적인 스타일을 피하자 .class p{...}
 * board안에 텍스트는 p태그로 감싸고, 리스트이면 ul li
 * 형태가 변경이 될 수 있는 list같은 경우는 선택자를 쓰기보단 class를 준다.
 * 게시판 같은 경우도 특정할 수 있는 클래스를 넣어주기
@@ -46,6 +47,11 @@
 * 아래 class에서 margin-top으로 주고, margin-bottom은 쓰지 않음
 * line-height랑 폰트사이즈랑 맞춰쓰지 않고 em으로 사용할 것
 * inline-block에 font-size : 0은 접근성에 좋지 않음(예상한 여백이라면 그대로 둘것)
+* 모든 이미지를 스프라이트 하지 말자
+* 높이를 고정시킨 상태에서의 정렬을 피하자
+* 텍스트를 이미지로 사용하지 말자
+* 너무 이른 최적화는 피하자
+* 쓸모 없는 것을 두번 반복해서 사용하지 말자
 ```
 
 
@@ -60,9 +66,6 @@
 * 부수적으로 표현되는 것들은 클래스명을 다르게 해야한다.<br>
 지양) btn_small btn_white x / 지향) btn_small type_white
 ```
-
-
-
 
 
 ## CSS 정리
@@ -84,5 +87,7 @@
 |    전체선택    | *                 |
 
 
-## title
+## 그외
  * 링크에 연관된 title 잘써주세요
+ *  `<div class="summary__title">How people build&nbsp;software</div>`
+ - &nbsp;를 띄어쓰기 없이 쓰므로써 build&nbsp;software 이 부분을 한 문장으로 인식함
