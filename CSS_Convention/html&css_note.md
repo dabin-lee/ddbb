@@ -29,6 +29,7 @@
 ### Img관련 - html
 ```
 * figure태그는 안에 항상 img태그
+* figure는 이미지, 도표. code 등의 내용들이 들어 갈 수 있음
 * img태그가 여러개 있을 경우(갤러리처럼) figurecaption을 사용해서 설명문을 넣어줌
 ```
 
