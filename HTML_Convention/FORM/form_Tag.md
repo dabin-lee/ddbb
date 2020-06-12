@@ -110,31 +110,3 @@ submit button이 클릭되면 input 태그에 입력된 데이터가 form 태그
   </body>
 </html>
 ```
-
-
-
-# label
-
-- 라벨 가능 요소(labelable)의 제목(Caption).
-  - for 속성으로 라벨 가능 요소를 참조하거나 콘텐츠로 포함.
-  - 라벨 가능 요소: button, input, progress, select, textarea
-  - 속성 : for
-  - 의미 : 참조할 라벨 가능 요소의 id 속성 값
-
-```
-<!-- 라벨 가능 요소를 참조 -->
-<input type="checkbox" id="user-agreement" />
-<label for="user-agreement">동의하십니까?</label>
-
-<!-- 라벨 가능 요소를 포함 -->
-<label><input type="checkbox" />동의하십니까?</label>
-```
-
-
-`<input type=text name='a' readonly="readonly">`
-
-- text 박스 읽기만 가능 / form값 전송 가능
-
-`<input type=text name='a' disabled="disabled"> `
-
-- text 박스 읽기만 가능 / form값 전송 불가능

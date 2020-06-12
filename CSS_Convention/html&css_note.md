@@ -39,6 +39,8 @@
 * img영역같은 경우, width와 height로 강제적으로 넣지 말고 img밖은 overflow:hidden과 img는 position값으로 비율이 무너지지 않도록
 * 경로는 절대경로로 넣어서 쓰도록
 * bg이미지는 position값이 항상 5단위 10단위로 끊어지게
+    -  https://skbroadband.com/Main.do
+    -  https://skbroadband.com/common/img/vin/common/icon_color_set.png
 
 ```
 
@@ -67,6 +69,15 @@
 지양) btn_small btn_white x / 지향) btn_small type_white
 ```
 
+### * form 태그 관련
+```
+- input type이 text일 경우 : type, id, title, value 순서로 속성을 선언한다.
+- input type이 radio, checkbox 일 경우 :type, name, id, checked 순서로 속성을 선언한다.
+- input type이  image인 경우: type, src, alt 순서로 애트리뷰트를 선언한다.
+- 폼 전송 역할을 하는 디자인 버튼 -> image 타입 사용.
+- 디자인이 적용되지 않는 버튼은 button type="submit"
+
+```
 
 ## CSS 정리
 
@@ -87,12 +98,11 @@
 |    전체선택    | *                 |
 
 
-<<<<<<< HEAD:CSS_Convention/html&css유의사항.md
 ## 그외
  * 링크에 연관된 title 잘써주세요
  *  `<div class="summary__title">How people build&nbsp;software</div>`
  - &nbsp;를 띄어쓰기 없이 쓰므로써 build&nbsp;software 이 부분을 한 문장으로 인식함
-=======
+
+
 ## title
  * 링크에 연관된 title 잘써주세요
->>>>>>> 6101260520b31714edb78f47dda7967d1d4403ba:CSS_Convention/html&css_note.md
