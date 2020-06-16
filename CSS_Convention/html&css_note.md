@@ -29,6 +29,7 @@
 ### Img관련 - html
 ```
 * figure태그는 안에 항상 img태그
+* figure는 이미지, 도표. code 등의 내용들이 들어 갈 수 있음
 * img태그가 여러개 있을 경우(갤러리처럼) figurecaption을 사용해서 설명문을 넣어줌
 ```
 
@@ -102,7 +103,12 @@
  * 링크에 연관된 title 잘써주세요
  *  `<div class="summary__title">How people build&nbsp;software</div>`
  - &nbsp;를 띄어쓰기 없이 쓰므로써 build&nbsp;software 이 부분을 한 문장으로 인식함
+<<<<<<< HEAD
 
+=======
+ 
+=======
+>>>>>>> 39eb7b03852c72af20e42ee4638b96585b91342e
 
 ## title
  * 링크에 연관된 title 잘써주세요

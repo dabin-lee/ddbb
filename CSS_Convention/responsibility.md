@@ -15,3 +15,13 @@
 
 portrait -> /* 세로가 길어지는 상태  */ <br>
 landscape -> /* 가로가 세로보다 길어지는 상태로 변환*/
+
+
+## Media(grid) options
+- divece 종류에 따른 단위는 '기획, 디자인' 단게에서 결정하는 것이 효과적이다.
+
+| 종류          | 디바이스         | 단위(px) |
+|---------------|------------------|----------|
+| Large Device  | DesktopS         | 1024px   |
+| Medium Device | Tablets          | 1024px   |
+| Small Device  | Tablets + Phones | 768px    |
