@@ -31,6 +31,12 @@
 * figure태그는 안에 항상 img태그
 * figure는 이미지, 도표. code 등의 내용들이 들어 갈 수 있음
 * img태그가 여러개 있을 경우(갤러리처럼) figurecaption을 사용해서 설명문을 넣어줌
+    ```
+    input type = "button"
+    button type = "button"
+    ```
+    - input, button 태그 둘 중 아무거나 상관 없음
+-마우스 오버 효과된 화면 구성이 html마크업안에도 있어야함
 ```
 
 ### Img관련 - css
@@ -103,12 +109,27 @@
  * 링크에 연관된 title 잘써주세요
  *  `<div class="summary__title">How people build&nbsp;software</div>`
  - &nbsp;를 띄어쓰기 없이 쓰므로써 build&nbsp;software 이 부분을 한 문장으로 인식함
-<<<<<<< HEAD
-
-=======
- 
-=======
->>>>>>> 39eb7b03852c72af20e42ee4638b96585b91342e
 
 ## title
  * 링크에 연관된 title 잘써주세요
+
+
+## 가운데 정렬
+- img 나 text는 "text-align:center" 를 써라.
+
+
+## alt와 title
+```
+<img src="이미지 주소" alt="이미지 설명">
+<img src="penguin.jpg" alt="해변에 서있는 바위뛰기펭귄.">
+```
+1. alt 속성
+- 'altemate' 대체하다 의 의미
+- 이미지를 불러오지 못했을 때 이미지 설명을 대체로 불러온다.
+- 웹접근성 : 시각장애인을 위한 웹페이지를 소리로 읽어주는 서비스에 해당
+
+2. title 속성
+- title은 alt특성을 적합하게 대체할 수 없다.
+- alt의 값을 title에도 반복하는 것을 피해야 한다. (스크린리더기가 설명을 두 번 읽게 됨)
+- 이미지가 설명을 필요로 하는 경우 `<figure>`와 `<figcaption>` 요소를 사용
+- 새창으로 열릴때는 title로 새창 열림을 정의해 주어야 한다. (title="go to new window")

@@ -1,40 +1,36 @@
 
-- js에서 객체를 만드는 두가지 방법
-- 1. literal : var object = {};
-- 2. objectConstructor  :  var object = new Object();
-
-## 객체 생성자
-
-- 객체 생성자란? 함수를 통해서 새로운 객체를 만들고 그 안에 넣고싶은 값 또는 함수를 구현 할 수 있도록 해준다.
-- 객체 생성자 함수를 작성할 때에는 관례상 이름의 첫 문자만을 대문자로 작성한다.
-- new라는 키워드를 사용한다.
+### propotype
+1. propotype의 개념
+- 역할 : 객체생성자로 만들었을 때, 그것으로 만든 객체들끼리 공유할 수 있는 값이나 함수
 ```
 function Animal(type, name, sound) {
   this.type = type;
   this.name = name;
   this.sound = sound;
-  this.say = function() { //익명함수
+  <!-- this.say = function() { //익명함수
     console.log(this.sound);
-  };
+  }; -->
 }
-const dog = new Animal("개", "멍멍이", "멍멍"); // 객체 생성자 함수호출
-//하나의 객체가 만들어지고 function안에 this는 이 객체를 의미한다.
-// 객체 생성자를 사용해서 (function문 ) 새로운 객체를 만들 때는 new라는 키워드를 사용한다.
 
+Animal.prototype.say = function(){
+    console.log(this.sound);
+}
+Animal.prototype.sharedValue = 1;
+
+const dog = new Animal("개", "멍멍이", "멍멍");
 const cat = new Animal("고양이", "야옹이", "야옹");
 
 dog.say();  //멍멍
 cat.say();  //야옹
+
+
+
 ```
-  - this.say에서 새로운 함수가 계속 만들어지는 부분 효율적이지 않기 때문에 바깥으로 꺼내서 재사용 한다. -> 프로토타입을 이용해서
 
-
-## propotype
-
-
-1. propotype의 개념
 - js는 클래스라는 개념이 없기 때문에 기존의 객체를 복사하여 새로운 객체를 생성하는 propotype 기반의 언어이다.
 - 이렇게 생성된 객체는 다른 객체의 원형이 될 수 있다.
+- 같은 객체 생성자 함수를 사용하는 경우, 특정 함수 또는 특정 값을 재사용 할 수 있는데 그게 바로 프로토타입.
+
 - 사용 예시
   ```
   function Person(){
@@ -52,8 +48,8 @@ cat.say();  //야옹
   - 각자 3개의 속성을 갖고 있고 데이터 또한 동일.
   - 메모리관점에서 kim과 lee 객체가 생성되면서 6개 변수가 메모리에 저장 됨. 심지어 중복된 값임.
 
-2. propotype을 사용하여 객체를 생성
-
+1. propotype을 사용하여 객체를 생성
+- 프로토타입은 다음과 같이 객체 생성자 함수 아래에 .prototype.[원하는키] = 코드를 입력하여 설정 할 수 있습니다.
 ```
 function Person(){}
 
@@ -70,6 +66,7 @@ Person.propotype.nose = 1;
   - 메모리 관점: kim과 lee는 자신이 변수를 가지고 있는게 아니라, Person.prototype이라는 어떤 Object의 hand라는 속성을 공유하고 있다.
   - 위의 코드 처럼 생성된 객체의 수 만큼 변수가 저장되는 것이 아니라, 같은 생성자를 통해서 만들어진 객체들은 하나의 prototype 이라는 Object를 공유하고 있다는 뜻
   - Person.prototype이라는 빈 Object가 어딘가에 존재하고, Person 함수로부터 생성된 객체(kim, lee)들은 어딘가에 존재하는 Object에 들어있는 값을 모두 갖다쓸 수 있다.
+  -
 3. prototype object
 - js에서 함수가 정의 될 때, 기본적으로 생성자(constructor)가 부여된다.
 - 생성자가 부여된 함수는 new를 통해 객체를 생성할 수 있게 된다.
@@ -78,9 +75,14 @@ Person.propotype.nose = 1;
 - 출처 : https://medium.com/@bluesh55/javascript-prototype-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-f8e67c286b67
 
 
+4. prototype link
+- 자바스크립트 객체는 Prototype이라는 내부 프로퍼티가 존재한다.
+- 거의 모든 객체가 생성 시점에 이 프로퍼티에 null이 아닌 값이 할당된다.
 
 
-4) 프로토타입의 생성
+
+
+5) 프로토타입의 생성
 - 프로토타입은 다음과 같이 객체 생성자 함수 아래에 .prototype.[원하는키] = 코드
 - 프로토타입의 생성 : 가장 기본적인 방법은 객체 생성자 함수(object constructor function)를 작성하는 것
     - 생성자 함수를 작성 하고 new 연산자를 사용해서 객체를 생성하면, 같은 프로토타입을 가지는 객체들을 생성할 수 있다.
@@ -129,4 +131,14 @@ document.write(`우리 집 강아지는 ${myDog.breed()} 입니다.`);
 - 상속은 단방향임.
 
 
+
+
+
+
+
+
+
+
+
+---
 
