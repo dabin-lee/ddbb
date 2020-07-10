@@ -24,7 +24,8 @@ Java, Python, Ruby등 객체지향언어에서 빠질 수 없는 개념이죠.<b
 ### javascript에서 객체를 만드는 방법
   - 1. var objectLiteral = {}; //1
   - 2. var objectContructor = new Object(); //2
-     - 첫 번째 Literal 방법은 객체를 만들어내는 단축어? 숏컷이고, 두 번째 생성자를 이용한 방법이다. <br> 기본적으로 두 방법 모두 Object 생성자의 프로토타입을 상속 받아 생성되었다.
+     - 첫 번째 Literal 방법은 객체를 만들어내는 단축어? 숏컷이고, 두 번째 생성자를 이용한 방법이다.
+<br> 기본적으로 두 방법 모두 Object 생성자의 프로토타입을 상속 받아 생성되었다.
 
 ```
 function Person(){

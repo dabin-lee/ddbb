@@ -38,6 +38,7 @@ cat.say();  //야옹
 
   var kim = new Person();
   var lee = new Person();
+
   console.log(kim.hand)  //2
   console.log(lee.hand)  //2
   ```
@@ -71,11 +72,27 @@ Person.propotype.nose = 1;
 - propotype object가 생성되고 object함수가 가지고 있는 prototype속성과 연결 된다.
 - 출처 : https://velog.io/@afant/Javascript-%EA%BC%AD-%EC%95%8C%EC%95%84%EC%95%BC-%ED%95%A0-Prototype%EC%9D%98-%EA%B0%9C%EB%85%90-
 - 출처 : https://medium.com/@bluesh55/javascript-prototype-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-f8e67c286b67
+- 객체는 언제나 함수(function)으로 생성된다.
+```
+function Person ()
+var parsonObject = new Person();
+```
 
-
-4. prototype link
-- 자바스크립트 객체는 Prototype이라는 내부 프로퍼티가 존재한다.
+1. prototype link
+- 자바스크립트는 Prototype Link 와 Prototype Object가 존재한다.
 - 거의 모든 객체가 생성 시점에 이 프로퍼티에 null이 아닌 값이 할당된다.
+- __proto__ 는
+
+- Prototype Object
+  객체는 언제나 함수(Function)로 생성됩니다.
+  ```
+  function Person() {} // => 함수
+  var personObject = new Person(); // => 함수로 객체를 생성
+  ```
+
+  - Object도 함수다!
+
+
 
 
 

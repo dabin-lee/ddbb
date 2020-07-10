@@ -62,9 +62,11 @@
 - form안에는 하나의 submit만 존재
 - 양식과 button이 모두 form 안에 포함되어야 한다.
 
-####  link와 button
+####  dl dt dd
 
-
+- `<li>` 사이에 br이 들어가면 안되는 거 처럼
+- `<dd>` 사이에 br 태그 들어가면 안되어요.
+- `<dl><dt></dt><dd></dd></dl>` 는 세트잖아요.
 
 
 <!--
@@ -75,3 +77,4 @@
 https://mygumi.tistory.com/359
 https://juyeol.tistory.com/25
 
+### IR 기법, IS 기법
