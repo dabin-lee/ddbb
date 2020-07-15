@@ -38,6 +38,12 @@ var kim = new Person();
 var lee = new Person();
 ```
 
+
+
+- class와 instance 의 차이점
+
+
+
 ### Prototype Object
 
 

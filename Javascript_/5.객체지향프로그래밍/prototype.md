@@ -150,31 +150,39 @@ var parsonObject = new Person();
    - 상속은 단방향임.
 
    ```
-   function Animal(type, name, sound) {
-     this.type = type;
-     this.name = name;
-     this.sound = sound;
-   }
 
-   Animal.prototype.say = function(){
-       console.log(this.sound);
-   }
+// 1. Animal 객체생성자 만들기
+    function Animal(type, name, sound) {
+        this.type = type;
+        this.name = name;
+        this.sound = sound;
+    }
 
-  // 최대한 Animal이 가지고 있는 것을 재사용 해서 dog, cat 객체생성자 생성
-  // 자체적으로 type을 넣어줄 것이므로, type을 필요로 하지 않는다.
+    // 2. say라는 프로토타입 생성
+    Animal.prototype.say = function(){
+        console.log(this.sound);
+    };
 
-     function Dog(name, sound){
-       Animal.call(this, '개', name, sound);
-     }
-     function Cat(name, sound){
-       Animal.call(this, '고양이', name, sound);
-     }
+    //3. Dog, Cat이라는 객체 생성자 만듬
+      // 최대한 Animal이 가지고 있는 것을 재사용 해서 dog, cat 객체생성자 생성
+    function Dog(name, sound){
+        Animal.call(this, '개', name, sound); /
 
-    Dog.proptotype = Animal.prototype;
-    Cat.proptotype = Animal.prototype;
+        /자체적으로 type을 넣어줌
+    } // call을 호출하면 첫번째 파라미터의 this는 객체생성자의 this / 그 이후는 animal의 파라미터들
+    function Cat(name, sound){
+        Animal.call(this, '고양이', name, sound);
+    }
 
-     const dog = new Dog("개", "멍멍이", "멍멍");
-     const cat = new Animal("고양이", "야옹이", "야옹");
+    //4. prototype 서로 공유
+    Dog.prototype = Animal.prototype;
+    Cat.prototype = Animal.prototype;
+
+      const dog = new Animal('개', '멍멍이', '멍멍');
+      const cat = new Animal('고양이', '야옹이', '야옹');
+
+      dog.say();
+      cat.say();
    ```
 
 4. 클래스로 구현해보기
