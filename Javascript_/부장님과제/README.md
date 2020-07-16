@@ -69,8 +69,8 @@ function car(make, model, year, owner) {
    this.owner = owner;
 }
 
-carDB = new car("테슬라", "테슬라", 2020, db)
-carMJ = new car("벤츠", "벤츠350", 2020, mj)
+carDB = new car("테슬라", "modelX", 2020, db)
+carMJ = new car("벤츠", "E클래스", 2020, mj)
 ```
 
 
