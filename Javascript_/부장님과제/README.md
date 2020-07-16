@@ -39,10 +39,11 @@ person[email] = "asdf@example.com";
 
 (1-2) 객체 안에 함수 넣기
   - 객체 리터럴에서도 메서드(객체 프로퍼티인 함수)를 추가할 수 있다. 
+  - 함수를 객체에 담고 있는 프로퍼티를 메서드라고 부른다 
 ```
   const o = {
     name : 'dabini', //원시값 
-    bark : function(){ return `yayayaya`;} //함수 프로퍼티
+    bark : function(){ return `yayayaya`;} //메서드
   }
 ```
 
@@ -78,41 +79,51 @@ function Car(make, model, year) {
    this.model = model;
    this.year = year;
 }
- // 인스턴스를 생성. 
- // 인자로 전달받은 값을 객체에 할당하기 위해서 this 키워드를 사용했다 ★
-
+ - 인스턴스를 생성. 
+ - 인자로 전달받은 값을 객체에 할당하기 위해서 this 키워드를 사용했다 ★
 
 var mycar = new Car("붕붕이", "소나타", 2018);
-  // 객체 생성
-  // Car함수를 new 키워드를 통해 호출하면 Car()는 생성자 함수로 동작
+  - 객체 생성
+  - Car함수를 new 키워드를 통해 호출하면 Car()는 생성자 함수로 동작
+
+
 
 //2. prototype을 통해 함수에 프로퍼티 추가 
-function Mycar(make, model, year, owner) {
+  - 객체 생성자는 함수를 통해서 새로운 객체를 만들고 그 안에 넣고 싶은 값 혹은 함수들을 구현 할 수 있게 해준다.
+
+function Mycar(make, model, year, sound) {
   this.make = make;
   this.model = model;
   this.year = year;
-  this.owner = owner;
+  this.sound = sound;
 }
-// 차의 owner를 정의하기 위해 car 함수에 owner 추가 정의 해준다.
 
-var carDB = new Mycar("테슬라", "modelX", 2020, db);
-var carMJ = new Mycar("벤츠", "E클래스", 2020, mj);
+Mycar.prototype.say = function() {
+  console.log(this.sound);
+};
+
+var DB = new Mycar("테슬라", "modelX", 2020, "부릉부릉");
+var MJ = new Mycar("벤츠", "E클래스", 2020, "빵빵");
+
+DB.say(); //부릉부릉
+MJ.say(); //빵빵
 
 
-// 3. prototype 프로퍼티 객채 생성
+// 3. 객체 생성자 상속받기
+  - prototype 프로퍼티 객채 생성(참고 : https://victorydntmd.tistory.com/52)
 
 let foo = function(){
  this.name = "dabin"
  this.email = "dblee@ipartner.co.kr"
 }
- //생성자 함수를 만들어준다. 
+  - 생성자 함수를 만들어준다. 
 
 let foo = function(){}
 foo.prototype.name = "dabin"
 foo.prototype.email = "dblee@ipartner.co.kr"
 
 let fooObj = new foo();
- // 프로토타입을 통해 생성자 함수로 생성된 객체 모두에 프로퍼티, 메서드 공유 
+  - 프로토타입을 통해 생성자 함수로 생성된 객체 모두에 프로퍼티, 메서드 공유 
 ```
 
 
@@ -146,7 +157,12 @@ console.log(y); //5
 
 
 __배열 구조 분해__
-- 기본 변수 할당
+- 배열을 해체할당하는 경우 변수명에 관계없이 순서에따라 할당
+- 참고 : https://beomy.tistory.com/18
+
+
+- 1) 기본 변수 할당
+ - foo에 one, two, three를 각각 저장한 후, 변수 one two three에 구조분해로 할당되어 출력
 ```
 var foo = ["one", "two", "three"];
 
@@ -154,29 +170,41 @@ var [a, b, c] = foo;
 console.log(a); // "one"
 console.log(b); // "two
 ```
-
-- 배열 안에 있는 원소를 다른 이름으로 새로 선언해주고 싶을 때 사용할 경우 
+- 2) 선언에서 분리한 할당 
+ - 변수를 선언과 할당을 분리하여 배열 구조분해 할당
 ```
-const array = [1];
-const [one, two = 2] = array;
+var a, b; 
+[a, b] = [1, 2]; 
+console.log(a);// 1 
+console.log(b); // 2
+```
 
-console.log(one);
-console.log(two);
+- 3) 
+```
+var array = [1, 2, 3];
+var a = array[0];
+var b = array[array.length - 1];
+console.log(a); // 1
+console.log(b); // 3
 ```
 
 __3. 매게변수 해체__
 - 함수의 파라미터에서도  비구조화 당을 할 수 있다. 
 ```
-function getGogo({ subject, verb, object }) {
-  return `${subject} ${verb} ${object}`;
-}
+
 const print = {
   subject: "I",
   verb: "love",
   object: "javascript"
 };
+// 객체를 매개변수로 넘겨주고 해체 할당
 
-console.log(getGogo(print));
+function getGogo({ subject, verb, object }) {
+  return `${subject} ${verb} ${object}`;
+}
+// 객체를 인수로 받아 리턴하는 함수
+
+console.log(getGogo(print)); // I love javascript
 ```
 
 ```
@@ -190,10 +218,33 @@ print(obj); // 1 2
 
 
 #### 그 외 함수 정의법
-1. 리터럴 함수
-2. 생성자 함수
-3. 즉시실행함수 
-4. 콜백함수
+1. 함수 선언식 (Function Statement)
+- 함수 선언 방식은 함수 리터럴 형식과 같다.
+- 함수 선언문은 반드시 함수 이름이 명시되어 있어야 한다.
+- 함수 이름으로 함수를 호출한다. ex) greet();
+```
+greet();
+// 함수 선언
+function greet(){
+	console.log('hi');
+}
+```
+2. 함수 표현식 (Function Expressions
+- 함수 리터럴로 생성한 함수를 변수에 할당
+- 자바스크립트에서 표현식이란, 값을 반환하는 식 또는 코드이다.
+- function은 익명함수이고 함수 변수인 변수명을 통해 호출
+```
+sayHi(); // 'hi'
+sayHello() ; // sayHello is not a function
+
+var hi ='hi';
+function sayHi(){ console.log('hi') }
+var sayHello = function(){ console.log('hello') };
+```
+
+__결론, 함수 표현식은 호이스팅이 되지 않고 함수 선언으로 선언된 함수는 호이스팅 된다. 즉 함수가 정의되기 전에 함수를 호출할 수 있다.__
+
+3. Function 생성자를 이용한 방법
 
 
 #### class와 prototype
