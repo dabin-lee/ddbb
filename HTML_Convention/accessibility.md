@@ -112,6 +112,11 @@ https://juyeol.tistory.com/25
     ```
     <span class="blind">숨김 텍스트</span>
     .blind {
+        /* 눈에 보이는 부분을 제거1 */
+        border: 0;
+        padding: 0;
+        margin: 0;
+
         /* 레이아웃에 영향을 끼치지 않도록 */
         position: absolute;
 
@@ -119,12 +124,16 @@ https://juyeol.tistory.com/25
         width: 1px;
         height: 1px;
 
-        /* 눈에 보이는 부분을 제거 */
+        /* 눈에 보이는 부분을 제거3 */
         clip: rect(0 0 0 0);
-        margin: -1px;
         overflow: hidden;
-         <!-- padding: 0;
-         border: 0; -->
+
+        clip: rect(1px 1px 1px 1px); /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+        clip: rect(1px, 1px, 1px, 1px); /*maybe deprecated but we need to support legacy browsers */
+        clip-path: inset(50%); /*modern browsers, clip-path works inwards from each corner*/
+        white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+
+
     }
     ```
     - clip: rect(top right bottom left);
@@ -141,3 +150,5 @@ https://juyeol.tistory.com/25
 
 
 출처: https://freemi99.tistory.com/entry/Tip-IR기법과-IS기법 [꿈을꾸고있는]
+
+

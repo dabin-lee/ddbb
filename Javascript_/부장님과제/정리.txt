@@ -1,62 +1,30 @@
-리터럴이란? 변수 및 상수에 지정되는 값 자체를 일컫는다.
+
+- 리터럴이란? 변수 및 상수에 지정되는 값 자체를 일컫는다.(객체에서 파생되는 오브젝트+ 한번만 쓰는... 이런 뜻을 가지고 있다)
+    - 리터럴 : 코드상에서 데이터를 표현하는 방식 자체
+```
+var aaa = 2; //숫자
+var bbb = "2"; //문자
+var bbb = '2'; //얘도 문자
+var ccc = true; //얘는 불린
+var ddd = [1, 2, 3, 4]; //얘는 배열
+var eee = { p1 : 2, p2 : ‘2’ }; //얘는 객체
+var fff = null; //null
+var ggg = undefined; //undefined
+var hhh = function(){ alert('ㅋㅋㅋ'); } //얘는 함수!!
+```
 생성자란? 역할 : 객체를 생성할 때 항상 실행되는 것으로, 객체를 초기화해주기 위해 맨 처음 실행되는 메소드이다.
 
 
+1. 생성자함수 : var square = new Function("x", "return x*x"); (선언적 방식 보다는 일반 익명함수를 만드는 스타일과 비슷)
+2. 함수 리터럴 : var square = function(x) { return x*x }
+    - 함수를 리터럴(직접 입력한 문자열 처럼 보임)로써 만들고,
+    . 이렇게 정의된 함수를 변수에 할당함으로써,
+    . 함수를 생성하는 것
 
 
-생성자함수, 리터럴 함수  , 객체 프로퍼티 함수, 객채 생성자, 객체 리터럴, 객체 생성자 -> NEW를 붙이고 함수처럼 호출했음.
+1. 객체 생성자 3가지 방법 - 자바스크립트에 객체 정의 방법에는 리터럴 표기와 생성자 함수가 있다.
 
 
-비구조화 할당(destructuring assignment): ( :객체 구조 분해 할당)간단히 말하자면 배열이나 객체의 요소를 해체하여 별개의 변수로 추출할 수 있도록 하는 것
-
-
-
-[매게변수 해체 = 함수의 파라미터에서도 비구조화 할당]
-```
-function getGogo({ subject, verb, object }) {
-  return `${subject} ${verb} ${object}`;
-}
-const o = {
-  subject: "I",
-  verb: "hate",
-  object: "javascript"
-};
-
-console.log(getGogo(o));
-```
-
-```
-const obj = { a : 1 };
-function print({ a, b = 2 }){
-    console.log(a);
-    console.log(b);
-}
-print(obj); // 1 2
-```
-
-```
-[객체 비구조화 할당]
-const example = {
-    name : "james",
-    age : "15",
-    school : "some"
-};
-
-let {name, age} = example;
-console.log(name, age); //james 15
-```
-
-```
-[배열 비구조화 할당]
-const language = ["java", "c", "python", "kotlin"];
-const [first, second, third] = language;
-
-console.log(first, second, third);
-
-```
-
-
-1. 객체 생성자 3가지 방법 - 리터럴과 생성자
 - 객체의 속성값은 문자열, 숫자, 객체, 함수여도 된다.
 
 1) 리터럴(변수에 넣는 변하지 않는 데이터) 객체
@@ -97,6 +65,8 @@ var object = {
 
 
 3) 생성자 함수
+
+- 객체 생성자 -> NEW를 붙이고 함수처럼 호출했음.
 - new 키워드를 이용해서 인스턴스를 생성하여 객체를 생성
 - 일반 함수와 다르게 자신을 프로토타입으로 지정하고 그 객체를 리턴한다.
 ```
