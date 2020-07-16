@@ -14,12 +14,27 @@
 1. 객체 리터럴
 (1-1) 리터럴
   - 가장 일반적인 방법은 중괄호{ } 를 사용하여 객체를 생성하는 방법
+  - 중괄호 내 아무것도 적지 않으면 빈 객체가 생성
+  - 프로퍼티가 함수일 경우 해당 프로퍼티를 메소드라고 부른다.
 ```
 var person = {
     name: "victolee",
     email: "asdf@example.com",
     birth: "0225"
+    func : function() { // 함수
+        return null;
+    }
 }
+```
+- 이렇게 생성한 프로퍼티의 값들은 해당 객체에 접근하여 다른 값을 대입하고 사용할 수 있다.
+```
+//접근방법1
+person.name = "victolee";
+person.email = "asdf@example.com";
+
+//접근방법2 : 배열 처럼 대괄호 안에 프로퍼티를 적어서 접근
+person[name] = "victolee";
+person[email] = "asdf@example.com";
 ```
 
 (1-2) 객체 안에 함수 넣기
@@ -31,46 +46,73 @@ var person = {
   }
 ```
 
-2. 생성자 함수 (객체생성자)
-  - 반드시 "new" 연산자를 붙이고, 함수명 첫 글자는 대문자로 시작한다.
+2. Object() 생성자 함수
+ - new 키워드를 이용하여 Object 생성자 함수를 호출하면 비어있는 객체를 생성한다.
+ - new Object()로 빈 객체를 먼저 대입하고 생성된 객체에 프로퍼티를 추가해준다.
+ - 최근엔 쓰지 않음
+```
+var person = new Object();
+
+person.name = "victolee"
+person.email = "asdf@example.com
+person.bith = "0224";
+```
+
+3. 생성자 함수 (객체생성자)
+  - 반드시 "new" 연산자를 붙이고, 관례적으로 함수명 첫 글자는 대문자로 시작한다.
   - 선언적 방식 보다는 일반 익명함수를 만드는 스타일과 비슷
   - 일반 함수와 다르게 자신을 프로토타입으로 지정하고 그 객체를 리턴한다.
+  
+  
+  [생성자 함수 동작 방식]
+  1. 빈 객체 생성 및 this를 바인딩 해준다. 
+  2. 생성자 함수 코드가 실행되기 전에 빈 객체가 생성된다. 
+  3. 이 객체가 생성자 함수가 새로 생성하는 객체이며, 이 객체는 this로 바인딩이 된다.
+ <br>
+ [tip!]이렇게 생성자 함수가 생성한 객체는 자신을 생성한 생성자 함수의 프로토타입 프로퍼티가 가리키는 객체를 자신의 프로토타입 객체로 설정하게 된다. 
+  
 ```
-//생성자 함수 생성
-function car(make, model, year) {
+//1. 생성자 함수 생성
+function Car(make, model, year) {
    this.make = make;
    this.model = model;
    this.year = year;
 }
--// 함수의 인자로 전달받은 값을 객체에 할당하기 위해서 this 키워드를 사용했다 ★
+ // 인스턴스를 생성. 
+ // 인자로 전달받은 값을 객체에 할당하기 위해서 this 키워드를 사용했다 ★
 
 
+var mycar = new Car("붕붕이", "소나타", 2018);
+  // 객체 생성
+  // Car함수를 new 키워드를 통해 호출하면 Car()는 생성자 함수로 동작
 
-// 객체 생성
-mycar = new car("붕붕이", "소나타", 2018);
-- // 2 new 키워드를 통해서 몇가지 더 정의하여 인스턴스 화 
-
-
-// 또다른 생성자 함수 정의
-function Person(name, age, company){
-  this.name = name;
-  this.age = age;
-  this.company = company
+//2. prototype을 통해 함수에 프로퍼티 추가 
+function Mycar(make, model, year, owner) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.owner = owner;
 }
-var db = new Person("이다빈", "30", "ipartners");
-var mj = new Person("김민정", "30", "ipartners");
-
-
 // 차의 owner를 정의하기 위해 car 함수에 owner 추가 정의 해준다.
-function car(make, model, year, owner) {
-   this.make = make;
-   this.model = model;
-   this.year = year;
-   this.owner = owner;
-}
 
-carDB = new car("테슬라", "modelX", 2020, db)
-carMJ = new car("벤츠", "E클래스", 2020, mj)
+var carDB = new Mycar("테슬라", "modelX", 2020, db);
+var carMJ = new Mycar("벤츠", "E클래스", 2020, mj);
+
+
+// 3. prototype 프로퍼티 객채 생성
+
+let foo = function(){
+ this.name = "dabin"
+ this.email = "dblee@ipartner.co.kr"
+}
+ //생성자 함수를 만들어준다. 
+
+let foo = function(){}
+foo.prototype.name = "dabin"
+foo.prototype.email = "dblee@ipartner.co.kr"
+
+let fooObj = new foo();
+ // 프로토타입을 통해 생성자 함수로 생성된 객체 모두에 프로퍼티, 메서드 공유 
 ```
 
 
