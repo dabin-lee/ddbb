@@ -163,9 +163,9 @@ person.bith = "0224";
 >	>  3. 이 객체가 생성자 함수가 새로 생성하는 객체이며, 이 객체는 this로 바인딩이 된다.
 >	> <br>
 >	> [tip!]이렇게 생성자 함수가 생성한 객체는 자신을 생성한 생성자 함수의 프로토타입 프로퍼티가 가리키는 객체를 자신의 프로토타입 객체로 설정하게 된다. 
-  
+
+:one:생성자 함수 생성
 ```
-//1. 생성자 함수 생성
 function Car(make, model, year) {
    this.make = make;
    this.model = model;
@@ -177,12 +177,12 @@ function Car(make, model, year) {
 var mycar = new Car("붕붕이", "소나타", 2018);
   - 객체 생성
   - Car함수를 new 키워드를 통해 호출하면 Car()는 생성자 함수로 동작
+```
 
 
-
-//2. prototype을 통해 함수에 프로퍼티 추가 
+:two: prototype을 통해 함수에 프로퍼티 추가 
   - 객체 생성자는 함수를 통해서 새로운 객체를 만들고 그 안에 넣고 싶은 값 혹은 함수들을 구현 할 수 있게 해준다.
-
+```
 function Mycar(make, model, year, sound) {
   this.make = make;
   this.model = model;
@@ -199,11 +199,11 @@ var MJ = new Mycar("벤츠", "E클래스", 2020, "빵빵");
 
 DB.say(); //부릉부릉
 MJ.say(); //빵빵
+```
 
-
-// 3. 객체 생성자 상속받기
+:three: 객체 생성자 상속받기
   - prototype 프로퍼티 객채 생성(참고 : https://victorydntmd.tistory.com/52)
-
+```
 let foo = function(){
  this.name = "dabin"
  this.email = "dblee@ipartner.co.kr"
