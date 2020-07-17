@@ -218,6 +218,39 @@ let fooObj = new foo();
   - 프로토타입을 통해 생성자 함수로 생성된 객체 모두에 프로퍼티, 메서드 공유 
 ```
 
+:four: class 생성]
+- 객체 생성자로 구현했던 코드를 조금 더 명확하고, 상속도 쉽게 할 수 있다. 
+
+```
+class Food{
+  constructor(name){ //name을 파라미터로 받아옴
+      this.name = name;
+      this.brands = [];
+      }
+      addBrand(brand){ //method_1 (class 내부에 구현하는 함수)
+          //파라미터에 brand를 받아와서 brands 배열에 push해준다.
+          this.brands.push(brand)
+      }
+      print(){ //method_2
+          console.log(`${this.name}을 파는 음식점들 : `)
+          console.log(this.brands.join(', '));
+          //join : 배열 안에 있는 것을 합침
+      }
+}
+
+
+const pizza = new Food('피자');
+pizza.addBrand('도미노'); //brand추가
+pizza.addBrand('피자헛');
+
+const chicken = new Food('치킨');
+chicken.addBrand('네네치킨');
+chicken.addBrand('BBQ');
+
+
+chicken.print();
+pizza.print();
+```
 ---
 
 
@@ -252,8 +285,9 @@ __결론, 함수 표현식은 호이스팅이 되지 않고 함수 선언으로 
 ---
 
 #### prototype 와 class
-- Prototype : 객체생성자로 만들었을 때, 그것으로 만든 객체들끼리 공유할 수 있는 값이나 함수
-- 프로토타입을 기반으로 상속을 흉내내도록 구현해 사용한다. 메모리와 중복된 값이 겹치는 문제를 가볍게 만든다. 
+:one: Prototype <br>
+	- 객체생성자로 만들었을 때, 그것으로 만든 객체들끼리 공유할 수 있는 값이나 함수
+	- 프로토타입을 기반으로 상속을 흉내내도록 구현해 사용한다. 메모리와 중복된 값이 겹치는 문제를 가볍게 만든다. 
 
 ```
 // 기존 생성자 함수 
@@ -274,9 +308,9 @@ __결론, 함수 표현식은 호이스팅이 되지 않고 함수 선언으로 
 // kim과 lee는 Person.prototype이라는 어떤 Object의 hand라는 속성을 공유하고 있다.
 ```
 
-- 객체 생성자 함수 아래에 .prototype.[원하는키] = 코드를 입력하여 설정
-- 메모리 관점 : 생성된 객체의 수 만큼 변수에 저장되는 것이 아닌, 같은 생성자를 통해서 만들어진 객체들은 하나의 prototype을 공유하고 있다.  <br>
-Person 함수로부터 생성된 객체(kim, lee)들은 어딘가에 존재하는 Object에 들어있는 값을 모두 갖다쓸 수 있다.
+	- 객체 생성자 함수 아래에 .prototype.[원하는키] = 코드를 입력하여 설정
+	- 메모리 관점 : 생성된 객체의 수 만큼 변수에 저장되는 것이 아닌, 같은 생성자를 통해서 만들어진 객체들은 하나의 prototype을 공유하고 있다.
+	- Person 함수로부터 생성된 객체(kim, lee)들은 어딘가에 존재하는 Object에 들어있는 값을 모두 갖다쓸 수 있다.
 
 ```
 // 프로토타입 객체생성자 상속하기
@@ -293,14 +327,75 @@ let lee = new Person();
 console.log(kim.hand) // 2
 console.log(lee.hand) // 2
 ```
-[Prototype Object]
-1. 해당 함수에 Constructor(생성자) 자격 부여
- - constructor 자격이 부여되면 new를 통해서 객체를 만들어 낼 수 있게 된다. - 이것이 함수만 new 키워드를 사용할 수 있는 이유이다.
 
-2. prototype object 접근
- - 생성된 함수는 prototype이라는 속성을 통해서 prototype object에 접근 할 수 있다. 
- - 기본적인 속성으로 constructor와 __proto__ 를 가지고 있다. 
- 
-- Prototype Object는 일반적인 객체이므로 속성을 마음대로 추가/삭제 할 수 있다.
-- 참고 : https://medium.com/@bluesh55/javascript-prototype-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-f8e67c286b67
- 
+:two: Class<br>
+	- 객체생성자와 프로토타입을 조금 더 쉽게 사용하기 위해 만들어졌다.
+	- 상속을 할 때는 extends 키워드로 사용하는 생성자를 확장
+	- constructor에서 사용하는 super() 함수는 상속받는 상위 클래스의 생성자를 가르킨다.
+	- 함수와 동일하게 클래스 선언식과 표현으로 클래스를 만들 수 있다.
+
+	1) 클래스 선언 (class declarations)
+	```
+	class Polygon { 
+		constructor(height, width) 
+		{ this.height = height; this.width = width; } 
+		}
+	```
+	2) 클래스 표현 (class expressions)
+	```
+	// unnamed 
+	var Polygon = class { 
+		constructor(height, width){ 
+			this.height = height; 
+			this.width = width; 
+			} 
+		}; 
+	// named
+	var Polygon = class Polygon { 
+		constructor(height, width) {
+			this.height = height; 
+			this.width = width; 
+			} 
+		};
+	```
+- 생성자(Constructor) : 객체의 생성과 초기화를 하는 메소드, 클래스에 constructor는 하나여야한다. 
+- super() : 상위 클래스의 생성자 메소드를 호출 할 수 있다. 
+
+```
+class Person{
+  constructor(name, first, second ){    //new 키워드 객체가 생성되는 과정에서 먼저 실행됨
+  this.name = name;
+  this.first = first;
+  this.second = second;
+    console.log(`blblblbl`);
+  }
+}
+
+const kim = new Person('kim', 10, 20);
+consoel.log('kim', kim);
+
+
+```
+
+```
+class Aniaml {
+  constructor(type, name, sound) {
+    this.type = type;
+    this.name = name;
+    this.sound = sound;
+  }
+  say() {
+    console.log(this.sound);
+  }
+}
+
+class Dog extends Aniaml { // extends로 특정 class (Aniaml)를 상속 받음
+  constructor(name, sound) { //Animal안에서 사용하는 생성자를 덮어쓴다.
+    super("개", name, sound); //super() 는 상위클래스의 생성자(constructor)를 호출
+  }
+}
+
+const dog = new Dog("멍멍이", "멍멍멍");
+console.log(dog);
+```
+	
