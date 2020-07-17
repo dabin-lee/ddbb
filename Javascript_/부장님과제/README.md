@@ -44,8 +44,8 @@ __배열 구조 분해__
 - 참고 : https://beomy.tistory.com/18
 
 
-- 1) 기본 변수 할당
- - foo에 one, two, three를 각각 저장한 후, 변수 one two three에 구조분해로 할당되어 출력
+:one: 기본 변수 할당
+	- foo에 one, two, three를 각각 저장한 후, 변수 one two three에 구조분해로 할당되어 출력
 ```
 var foo = ["one", "two", "three"];
 
@@ -53,8 +53,8 @@ var [a, b, c] = foo;
 console.log(a); // "one"
 console.log(b); // "two
 ```
-- 2) 선언에서 분리한 할당 
- - 변수를 선언과 할당을 분리하여 배열 구조분해 할당
+:two: 선언에서 분리한 할당 
+	- 변수를 선언과 할당을 분리하여 배열 구조분해 할당
 ```
 var a, b; 
 [a, b] = [1, 2]; 
@@ -62,7 +62,7 @@ console.log(a);// 1
 console.log(b); // 2
 ```
 
-- 3) 
+:three:
 ```
 var array = [1, 2, 3];
 var a = array[0];
