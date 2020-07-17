@@ -204,15 +204,10 @@ MJ.say(); //빵빵
 :three: 객체 생성자 상속받기
   - prototype 프로퍼티 객채 생성(참고 : https://victorydntmd.tistory.com/52)
 ```
-let foo = function(){
- this.name = "dabin"
- this.email = "dblee@ipartner.co.kr"
-}
-  - 생성자 함수를 만들어준다. 
-
 let foo = function(){}
 foo.prototype.name = "dabin"
 foo.prototype.email = "dblee@ipartner.co.kr"
+	- 생성자 함수를 만들어준다. 
 
 let fooObj = new foo();
   - 프로토타입을 통해 생성자 함수로 생성된 객체 모두에 프로퍼티, 메서드 공유 
