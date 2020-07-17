@@ -10,6 +10,98 @@
 - 원시타입을 제외한 모든 값이 객체가 된다. 즉, 배열도 함수도 모두 객체이다. 
 
 
+---
+
+#### 비구조화 할당 (= 구조 분해 할당 = 해체 할당)
+  - 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게하는 자바스크립트 표현식
+  - 기존의 변수에서 어떤 값을 분해해 할당 할지를 정의해준다.
+  - 데이터를 하나씩 가져와서 처리해야 되는 상황을 한 번에 처리 할 수 있는 간편함
+  
+__객체 구조분해__
+- 보통 변수를 객체 리터럴을 선언하고 그 값을 추출해서 변수 혹은 상수에 바로 선언할 수 있다. 
+ 
+```
+const myDog = {
+    name : '망고',
+    age : 5,
+    sound : '멍멍'
+};
+const {name, age, sound} = myDog;
+console.log(name); //망고
+console.log(age); //5
+- 1. 분해된 객체를 선언된 변수에 할당
+
+
+const { x: name, y: age } = myPat; 
+console.log(x); //망고
+console.log(y); //5
+- 2. 객체 분해 / 객체의 속성명과는 전혀 다른 이름의 변수에 할당 할 수 있다. 
+```
+
+
+__배열 구조 분해__
+- 배열을 해체할당하는 경우 변수명에 관계없이 순서에따라 할당
+- 참고 : https://beomy.tistory.com/18
+
+
+- 1) 기본 변수 할당
+ - foo에 one, two, three를 각각 저장한 후, 변수 one two three에 구조분해로 할당되어 출력
+```
+var foo = ["one", "two", "three"];
+
+var [a, b, c] = foo;
+console.log(a); // "one"
+console.log(b); // "two
+```
+- 2) 선언에서 분리한 할당 
+ - 변수를 선언과 할당을 분리하여 배열 구조분해 할당
+```
+var a, b; 
+[a, b] = [1, 2]; 
+console.log(a);// 1 
+console.log(b); // 2
+```
+
+- 3) 
+```
+var array = [1, 2, 3];
+var a = array[0];
+var b = array[array.length - 1];
+console.log(a); // 1
+console.log(b); // 3
+```
+
+__3. 매게변수 해체__
+- 함수의 파라미터에서도  비구조화 당을 할 수 있다. 
+```
+
+const print = {
+  subject: "I",
+  verb: "love",
+  object: "javascript"
+};
+// 객체를 매개변수로 넘겨주고 해체 할당
+
+function getGogo({ subject, verb, object }) {
+  return `${subject} ${verb} ${object}`;
+}
+// 객체를 인수로 받아 리턴하는 함수
+
+console.log(getGogo(print)); // I love javascript
+```
+
+```
+const obj = { a : 1 };
+function print({ a, b = 2 }){
+    console.log(a);
+    console.log(b);
+}
+print(obj); // 1 2
+```
+ 
+ ---
+
+
 #### 객체 생성 
 1. 객체 리터럴
 (1-1) 리터럴
@@ -126,95 +218,7 @@ let fooObj = new foo();
   - 프로토타입을 통해 생성자 함수로 생성된 객체 모두에 프로퍼티, 메서드 공유 
 ```
 
-
-
-
-#### 비구조화 할당 (= 구조 분해 할당 = 해체 할당)
-  - 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게하는 자바스크립트 표현식
-  - 기존의 변수에서 어떤 값을 분해해 할당 할지를 정의해준다.
-  - 데이터를 하나씩 가져와서 처리해야 되는 상황을 한 번에 처리 할 수 있는 간편함
-  
-__객체 구조분해__
-- 보통 변수를 객체 리터럴을 선언하고 그 값을 추출해서 변수 혹은 상수에 바로 선언할 수 있다. 
- 
-```
-const myDog = {
-    name : '망고',
-    age : 5,
-    sound : '멍멍'
-};
-const {name, age, sound} = myDog;
-console.log(name); //망고
-console.log(age); //5
-- 1. 분해된 객체를 선언된 변수에 할당
-
-
-const { x: name, y: age } = myPat; 
-console.log(x); //망고
-console.log(y); //5
-- 2. 객체 분해 / 객체의 속성명과는 전혀 다른 이름의 변수에 할당 할 수 있다. 
-```
-
-
-__배열 구조 분해__
-- 배열을 해체할당하는 경우 변수명에 관계없이 순서에따라 할당
-- 참고 : https://beomy.tistory.com/18
-
-
-- 1) 기본 변수 할당
- - foo에 one, two, three를 각각 저장한 후, 변수 one two three에 구조분해로 할당되어 출력
-```
-var foo = ["one", "two", "three"];
-
-var [a, b, c] = foo;
-console.log(a); // "one"
-console.log(b); // "two
-```
-- 2) 선언에서 분리한 할당 
- - 변수를 선언과 할당을 분리하여 배열 구조분해 할당
-```
-var a, b; 
-[a, b] = [1, 2]; 
-console.log(a);// 1 
-console.log(b); // 2
-```
-
-- 3) 
-```
-var array = [1, 2, 3];
-var a = array[0];
-var b = array[array.length - 1];
-console.log(a); // 1
-console.log(b); // 3
-```
-
-__3. 매게변수 해체__
-- 함수의 파라미터에서도  비구조화 당을 할 수 있다. 
-```
-
-const print = {
-  subject: "I",
-  verb: "love",
-  object: "javascript"
-};
-// 객체를 매개변수로 넘겨주고 해체 할당
-
-function getGogo({ subject, verb, object }) {
-  return `${subject} ${verb} ${object}`;
-}
-// 객체를 인수로 받아 리턴하는 함수
-
-console.log(getGogo(print)); // I love javascript
-```
-
-```
-const obj = { a : 1 };
-function print({ a, b = 2 }){
-    console.log(a);
-    console.log(b);
-}
-print(obj); // 1 2
-```
+---
 
 
 #### 그 외 함수 정의법
