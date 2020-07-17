@@ -75,17 +75,17 @@ __3. 매게변수 해체__
 - 함수의 파라미터에서도  비구조화 당을 할 수 있다. 
 ```
 
+function getGogo({ subject, verb, object }) {
+  return `${subject} ${verb} ${object}`;
+}
+// 객체를 인수로 받아 리턴하는 함수
+
 const print = {
   subject: "I",
   verb: "love",
   object: "javascript"
 };
 // 객체를 매개변수로 넘겨주고 해체 할당
-
-function getGogo({ subject, verb, object }) {
-  return `${subject} ${verb} ${object}`;
-}
-// 객체를 인수로 받아 리턴하는 함수
 
 console.log(getGogo(print)); // I love javascript
 ```
