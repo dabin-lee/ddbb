@@ -22,6 +22,6 @@
 **[6. Git ](https://github.com/dabin-lee/ddbb/tree/master/Git)**
 
 ---
-**[7. javascript ](https://github.com/dabin-lee/ddbb/tree/master/javascript)**
+**[7. javascript ](https://github.com/dabin-lee/ddbb/tree/master/Javascript_)**
 
 ---
