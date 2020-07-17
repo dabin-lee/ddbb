@@ -1,6 +1,6 @@
-## 구조 디자인 HTML
 
-**[2. WEB](https://github.com/dabin-lee/ddbb/tree/master/WEB_develop)**
+
+**[1. WEB](https://github.com/dabin-lee/ddbb/tree/master/WEB_develop)**
 
 ---
 
@@ -12,7 +12,7 @@
 
 ---
 
-**[4. CLASS 이름짖기 ](https://github.com/dabin-lee/ddbb/tree/master/CSS_metodologia)**
+**[4. CLASS naming ](https://github.com/dabin-lee/ddbb/tree/master/CSS_metodologia)**
 
 ---
 
@@ -20,5 +20,9 @@
 
 ---
 **[6. Git ](https://github.com/dabin-lee/ddbb/tree/master/Git)**
+
+---
+---
+**[7. javascript ](https://github.com/dabin-lee/ddbb/tree/master/javascript)**
 
 ---
