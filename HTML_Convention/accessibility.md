@@ -153,3 +153,14 @@ https://juyeol.tistory.com/25
 출처: https://freemi99.tistory.com/entry/Tip-IR기법과-IS기법 [꿈을꾸고있는]
 
 
+### 태훈대리님 컨펌
+[공통]
+	1. a태그에 title를 자주 사용합니다! - 접근성 관려도 있고
+	    GTM 관련 데이터 뽑아갈때 title에서 텍스트 뽑아가시기도 합니다
+	2. gnb 등 실무 하듯이 class도  입력해주세요
+	3. header, main, footer 를 다 감싸는 div 태그 하나가 필요할듯 합니다~ EX ) <div class="wrap"> ~ </div>
+	4. 이건 참고용 alt 값 img태그로 이미지란걸 이미 알기에  아이콘 이미지, 헌혈 이미지 이런식으로 안적어도 됩니다~
+	5. html5 태그는 저도 잘 안써봐서 연습할때 많이 써보는건 굳굳
+	   실무에선 충분히 이해하고 사용하면 더 좋을 것 같아요
+	6.  참고 + (다음으로 오는) > 자식  div.test (test 클래스를 가진 div )
+
