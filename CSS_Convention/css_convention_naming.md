@@ -78,3 +78,21 @@
 | 위치변화      | _top / _mid / _bot / _left / _right |
 | 순서변화      | _fst / _lst                         |
 | 이전/다음     | _prev / _next                       |
+
+
+# nav-bar naming
+
+1. GNB ( Global navigation bar ) 
+ - 본래의 의미 : home, login, sitemap 등 어느페이지에서 들어가든 공통적으로 사용할수 있는 메뉴들을 보통 지칭 (네이버 회원 중 '진이'님 첨삭)
+ - 통용되는 의미 : 최상위 메뉴로 보통 상단에 위치.
+
+2. LNB ( Local navigation bar )
+
+ - 본래의 의미 : 일반적으로 알고 있는 최상위의 대 메뉴로 예를 들어 company , r&d, community 등 이런식으로 각 사이트마다 그 사이트에 맞게 구성되는 메뉴구조  (네이버 회원 중 '진이'님 첨삭)
+ - 통용되는 의미 : 하위 메뉴로 뎁쓰를 표현함. 보통 왼쪽에 위치해서 'left navigaiton bar'로 혼용 하기도 함.
+
+3. SNB ( Side Navigation Bar )
+ -  본래의 의미 : 하위 메뉴로 보통 레프트 메뉴를 지칭 함 (네이버 회원 중 '진이'님 첨삭)
+
+4. RNB ( right navigation bar )
+ - 통용되는 의미 : 정식 용어로 보기 힘들며, 위에서 설명한 'left navigation bar'에서 파생된 것으로 추측. 보통 우측에 위치한 것을 지칭함.
