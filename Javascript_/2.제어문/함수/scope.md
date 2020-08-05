@@ -86,3 +86,51 @@ console.log(value) //global scope => hello출력
   ```
   - 모든 스코프에서 호출할 수 있고, 명시적으로 user를 전달받는다.
 
+
+
+---
+```
+function a() {
+  var v_a = "a";
+  function b() {
+    var v_b = "b";
+    console.log("b :", typeof v, typeof v_a, typeof v_b)
+  }
+  b();
+  console.log("a :", typeof v, typeof v_a, typeof v_b);
+}
+
+var v = "v";
+a();
+console.log("o :", typeof v, typeof v_a, typeof v_b);
+
+
+// b : string string string
+// a : string string undefined
+// o : string undefined undefined
+```
+*결론*
+- 변수의 scope는 function의 scope를 따른다
+  - 객체(변수)는 선언된 함수 안에서만 접근이 가능하다.
+
+
+*shadowing*
+- 서로 다른 함수에서 같은 변수를 선언했을 때 발생하는 쉐도잉 효과
+```
+function shadowing_exmaple(){
+  var val = 0;
+    console.log("f", val);
+    val++; //함수안에서 val은 1로됨
+}
+
+var val = 0; //함수문 안에 val은 가려지게 됨
+shadowing_exmaple();
+console.log("o", val);
+
+//f 0
+//o 0
+```
+
+- function name { // 한 함수 안에서만 값이 유지되는 변수 va in_fn_va;}
+- // 여러 함수에서 값이 유지되면서 사용되는 변수 va out_fn_var;
+
