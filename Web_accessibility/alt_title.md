@@ -20,7 +20,10 @@
 <img src="news-1.jpg" alt="한 국회의원이 주민과 악수를 나누며 웃고있습니다." />
 ```
 
-  - alt 속성 사용시 유의사항
+  - alt 속성 사용시 유의사항 - 필수
+  - 1. img 태그에 alt 는 필수
+  - 2. alt는 단순 명료, 중복 제거
+  - 3. 의미 없는 이미지는 alt="" 제공
    - __title 속성은 alt 속성을 대체할 수 없으니 주의! alt 없이 title을 적어선 안됨.__
    - 명쾌하고 짧은 대체 텍스트를 제공
    - alt 속성으로 담기 어려운 긴 내용은 longdesc 속성을 활용. (단, 긴 내용은 텍스트로 표현을 권장)
@@ -84,6 +87,34 @@
 ```
   - 링크에서 title이 유용한 경우의 예시
   - 더보기라는 링크 텍스트가 맥락 정보를 제공하지 않기 때문에 무엇을 더 보는 링크인지 title 속성으로 설명
+
+>  [차장님 피드백]
+>
+>  ```
+>  1. _blank 사용 시 "새 창" 명시
+>
+>  1번) target속성으로 새 창으로 열림은 기계적으로 알 수 있는 것이므로 title속성 >자체를 생략하는 것이 좋음
+>  ```
+>
+>  :collision: => _blank 라고 마크업 되어 있으면 스크린리더가 해당 내용을 인식해서 정보를 제공해 주는 게 기본적인 내용인데 문제는 스크린리더기도 종류별로 있어서 일부 스크린리더 에서는 해당 기능을 지원하지 않는 경우가 있기 때문에<br> _blank로 새 창 열림 할때는 title로 새 창 열림을 명시해 주어야 합니다.
+>  <br>
+>  &nbps; ( 단 a태그 내 이미지 alt값 이나 텍스트로 새 창 열림이 명시되어 있으면 생략 가능 합니다.)
+>  ```
+>  <a href="http://www.bloodinfo.net/main.do" target="_blank" title="새 창">
+>    <img src="/images/comm/logo.png" alt="대한적십자사 혈액관리본부">
+>  </a>
+>
+>  <a href="http://www.bloodinfo.net/main.do" target="_blank">
+>    <img src="/images/comm/logo.png" alt="대한적십자사 혈액관리본부 새 창 이동">
+>  </a>
+>  ```
+> - 마크업 수정 예시
+> ```
+> <a href="https://www.facebook.com" target="_blank" title="facebook 새창열림">facebook</a>
+> => <a href="https://www.facebook.com" target="_blank" title="새 창">facebook</a>
+> ```
+> 링크 내 텍스트로 새 창 이동 사이트를 facebook이라고 명시 하고 있어서 간단하게 __"새 창"__ 이라고만 사용 하면 됩니다.
+
 
 
 ##### 3. [target]
@@ -161,3 +192,16 @@ target="_blank|_self|_parent|_top|framename"
 요청 기한  8월 7일
 
  -->
+
+
+3) 검색엔진 최적화
+
+(SEO : Search Engine Optimization)
+
+
+
+검색엔진이 사이트를 크롤링할 때, Alt 속성을 이용하여
+
+해당 상품을 더 잘 이해하고 검색결과 순위에서
+
+적절하게 색인할 수 있도록 합니다.
