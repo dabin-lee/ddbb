@@ -32,4 +32,4 @@
 **[9. jquery ](https://github.com/dabin-lee/ddbb/tree/master/jQuery)**
 
 ---
-**[10. learningJS ](https://github.com/dabin-lee/blob/master/learningJS/README.MD)**
+**[10. learningJS ](https://github.com/dabin-lee/blob/master/learningJS)**
