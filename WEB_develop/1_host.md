@@ -100,3 +100,24 @@
 <br> s이러한 흐름의 개념은 서버 운영 뿐만이 아니라 웹 프로그래밍할 때 알아야 되는 기본 개념이므로 잘 이해하고 계시기 바랍니다
 
 출처: https://prometheus.tistory.com/entry/내부접속localhost와-외부접속의-의미 [Prometheus]
+
+
+```
+어제 얘기했던 내용입니다.
+
+첫번째 localhost 설정
+다빈씨가 개인 컴에서 보려는 localhost 설정하세요.
+저는
+http://localhost:8585 이렇게 설정되어 있고 다른 사람들은
+http://218.153.37.181:8585/
+이렇게 접속해서 볼 수 있는거에요.
+
+두번째 폴더 공유하기 - localhost로 설정한 폴더
+https://studyforus.tistory.com/82
+중간에 사용자 추가는 Everyone 으로 하시면 됩니다.
+
+세번째 인바운드 설정
+https://m.blog.naver.com/zeboll/221134011377
+
+해보시고 잘 안되면 물어보세요
+```

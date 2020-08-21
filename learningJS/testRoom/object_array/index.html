@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="navBar" class="html_test">
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+            <li>Six</li>
+            <li>Seven</li>
+        </ul>
+    </div> -->
+
+    <h2 id="number">0</h2>
+    <div>
+        <button id="increase">+1</button>
+        <button id="decrease">-1</button>
+    </div>
+
+
+
+
+</body>
+<script>
+
+    const NUMBER_H2 = document.getElementById('number');
+    const INCREASE_BTN = document.getElementById('increase');
+    const DECREASE_BTN = document.getElementById('decrease');
+
+// id가 없을 때는 querySelectorAll('button');
+// const BUTTONS = document.querySelectorAll('button');
+// const [increase, decrease] = BUTTONS;
+
+
+
+    console.log(NUMBER_H2.innerText);
+    console.log(INCREASE_BTN.offsetTop);
+    console.log(DECREASE_BTN.id);
+
+
+    INCREASE_BTN.onclick = () => {
+        const CURRENT_NUM = parseInt(NUMBER_H2.innerText, 10); //문자열로 인식, 몇 진수로 인식할것인지 (현재 10진수)
+        // console.log('ddd');
+        NUMBER_H2.innerText = CURRENT_NUM + 1;
+    }
+    DECREASE_BTN.onclick = () => {
+        const CURRENT_NUM = parseInt(NUMBER_H2.innerText, 10);
+        NUMBER_H2.innerText = CURRENT_NUM - 1;
+    }
+
+</script>
+<!-- <script src="script.js"></script> -->
+</html>
