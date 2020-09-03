@@ -48,14 +48,11 @@
    - 예를 들어 CSS의 Vender prefix의 기능
    - 크롬에서는 `.eot` 형식이 지원이 되지 않는다. 그렇기에 로드 자체를 하지 않는다.
    - format 파일 형식
-<br>
-| file        | Format              | browser                                                 |
-|-------------|---------------------|---------------------------------------------------------|
-| .woff       | “woff”              | Chrome, Safari, Opera Mobile, Firefox, iE 9+            |
-| .ttf        | “truetype”          | Chrome 4+, Safari, Opera 10+, Firefox 3.5, Android, iOS |
-| .ttf, otf   | “opentype”          |                                                         |
-| .eot        | “embedded-opentype” | ie8 이하 버전                                           |
-| .svg, .svgz | "svg"               | Chrome, Safari, Opera, Opera Mobile, Safari Mobile      |
+    - `.woff` - format : “woff” / browser : Chrome, Safari, Opera Mobile, Firefox, iE 9+
+    - `.ttf` - format : “truetype” / browser : Chrome, Safari, Opera Mobile, Firefox, iE 9+
+    - `.ttf, otf` - format : “opentype” 
+    - `.eot` - format : “embedded-opentype” / browser : ie8 이하 버전
+    - `.svg, .svgz` - format : “svg” / browser : Chrome, Safari, Opera, Opera Mobile, Safari Mobile
 <br>
 5. 브라우저별 대응 방법
    - 서체 파일을 명시하는 순서가 아주 중요하다.
