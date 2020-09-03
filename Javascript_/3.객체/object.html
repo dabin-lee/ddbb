@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Object-oriented JavaScript example</title>
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>Lorem</li>
+        <li>Ipsum</li>
+    </ul>
+    <div></div>
+</body>
+
+<script>
+    $(function(){
+
+        // li요소 전체출력
+        var jb = $( 'li' ).get();
+        // for ( var i = 0; i < jb.length; i++) {
+        // $( 'div' ).append( '<p>' + jb[i].innerHTML + '</p>' );
+        // }
+
+        // 첫번째만 출력
+        var jb = $('li').get(0);
+        $('ul').after( '<p>' + jb.innerHTML + '</p>' );
+
+
+    });
+
+
+
+
+// append : 선택된 요소의 마지막에 요소나 컨텐츠 추가
+// prepend : 선택된 요소의 맨앞에 요소나 컨텐츠 추가
+//.appendTo()선택된 요소를 해당 요소의 마지막에 추가한다.
+//.prependTo()선택된 요소를 해당 요소의 첫번째에 추가한다.
+
+// get :
+// innerHTML()
+</script>
+</html>

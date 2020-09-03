@@ -153,11 +153,7 @@ https://juyeol.tistory.com/25
 출처: https://freemi99.tistory.com/entry/Tip-IR기법과-IS기법 [꿈을꾸고있는]
 
 
-<<<<<<< HEAD
-4) tabIndex - 
-=======
-### 태훈대리님 컨펌
-[공통]
+4) [공통]
 	1. a태그에 title를 자주 사용합니다! - 접근성 관려도 있고
 	    GTM 관련 데이터 뽑아갈때 title에서 텍스트 뽑아가시기도 합니다
 	2. gnb 등 실무 하듯이 class도  입력해주세요
@@ -166,5 +162,3 @@ https://juyeol.tistory.com/25
 	5. html5 태그는 저도 잘 안써봐서 연습할때 많이 써보는건 굳굳
 	   실무에선 충분히 이해하고 사용하면 더 좋을 것 같아요
 	6.  참고 + (다음으로 오는) > 자식  div.test (test 클래스를 가진 div )
-
->>>>>>> 9021f06563e3fa7d7c26d28792a95603eb9ecb9b

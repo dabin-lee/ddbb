@@ -1,3 +1,5 @@
+
+
 # HTML문서 <meta> 요소
 - metadata 정의 :  어떤 목적을 가지고 만들어진 데이터 (Constructed data width a purpose)
 - `<meta>` 태그는 해당 문서에 대한 정보인 메타데이터(metadata)를 정의할 때 사용합니다.
@@ -17,21 +19,6 @@
 |    name    | application-name author description generator keywords viewport |              메타데이터를 위한 이름을 명시함.              |
 
 
-<<<<<<< HEAD
-1) 검색 엔진을 위한 키워드(keyword)를 정의하는 예제
-`<meta name="keyword" content="HTML, meta, tag, element, reference">`
-
-2) 웹 페이지에 대한 설명(description)을 정의하는 예제
-`<meta name="description" content="HTML meta tag page">`
-
-3) 문서의 저자(author)를 정의하는 예제
-`<meta name="author" content="TCPSchool">`
-
-4) 5초 뒤에 다른 페이지로 리다이렉트(redirect)시키는 예제
-`<meta http-equiv="refresh" content="5;url=http://www.tcpschool.com">`
-
-5) 모든 장치에서 웹 사이트가 잘 보이도록 뷰포트(viewport)를 설정하는 예제
-=======
 1) 검색 엔진을 위한 키워드(keyword)를 정의하는 예제<br>
 `<meta name="keyword" content="HTML, meta, tag, element, reference">`
 
@@ -45,7 +32,6 @@
 `<meta http-equiv="refresh" content="5;url=http://www.tcpschool.com">`
 
 5) 모든 장치에서 웹 사이트가 잘 보이도록 뷰포트(viewport)를 설정하는 예제<br>
->>>>>>> 581736a5a92e1a9949724cdcba3d0f21b570c7a0
 `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
 
 #### <head> 안에 배치할 수 있는 요소
