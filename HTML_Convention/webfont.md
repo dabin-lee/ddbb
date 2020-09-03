@@ -53,7 +53,6 @@
     - `.ttf, otf` - format : “opentype” 
     - `.eot` - format : “embedded-opentype” / browser : ie8 이하 버전
     - `.svg, .svgz` - format : “svg” / browser : Chrome, Safari, Opera, Opera Mobile, Safari Mobile
-<br>
 5. 브라우저별 대응 방법
    - 서체 파일을 명시하는 순서가 아주 중요하다.
    - 서체 파일의 순서는 .eot, .woff, ttf, .svg 의 순 (파일 크기가 작은 순서부터)
