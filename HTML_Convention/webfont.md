@@ -48,11 +48,14 @@
    - 예를 들어 CSS의 Vender prefix의 기능
    - 크롬에서는 `.eot` 형식이 지원이 되지 않는다. 그렇기에 로드 자체를 하지 않는다.
    - format 파일 형식
-    - `.woff` - format : “woff” / browser : Chrome, Safari, Opera Mobile, Firefox, iE 9+
-    - `.ttf` - format : “truetype” / browser : Chrome, Safari, Opera Mobile, Firefox, iE 9+
-    - `.ttf, otf` - format : “opentype” 
-    - `.eot` - format : “embedded-opentype” / browser : ie8 이하 버전
-    - `.svg, .svgz` - format : “svg” / browser : Chrome, Safari, Opera, Opera Mobile, Safari Mobile
+```
+`.woff` - format : “woff” / browser : Chrome, Safari, Opera Mobile, Firefox, iE 9+
+`.ttf` - format : “truetype” / browser : Chrome, Safari, Opera Mobile, Firefox, iE 9+
+`.ttf, otf` - format : “opentype” 
+`.eot` - format : “embedded-opentype” / browser : ie8 이하 버전
+`.svg, .svgz` - format : “svg” / browser : Chrome, Safari, Opera, Opera Mobile, Safari Mobile
+```
+    
 5. 브라우저별 대응 방법
    - 서체 파일을 명시하는 순서가 아주 중요하다.
    - 서체 파일의 순서는 .eot, .woff, ttf, .svg 의 순 (파일 크기가 작은 순서부터)
@@ -61,10 +64,10 @@
    - IE8이하나 구 모바일 브라우저를 지원하지 않는다면 svg나 eot를 지원해줄 필요는 없다.
    - local(※) 값은 외부 자원을 참조하기 이전에 시스템에 설치된 글꼴을 우선 참조할 수 있도록 만들어 준다.
    - 브라우저별 지원 여부 확인
-   -  .woff (웹 페이지에서 사용하기 위한 글꼴) : https://caniuse.com/#feat=woff
-   -  .ttf (애플과 마이크로소프트가 개발한 표준 글꼴) : https://caniuse.com/#feat=ttf
-   -  .eot (웹에 포함된 글꼴을 사용할 수 있도록) : https://caniuse.com/#feat=eot
-   -  .svg, .svgz (품질 유지를 위한 벡터 그래픽 / 파일 크기가 크다.) : https://caniuse.com/#feat=svg
+     -  .woff (웹 페이지에서 사용하기 위한 글꼴) : https://caniuse.com/#feat=woff
+     -  .ttf (애플과 마이크로소프트가 개발한 표준 글꼴) : https://caniuse.com/#feat=ttf
+     -  .eot (웹에 포함된 글꼴을 사용할 수 있도록) : https://caniuse.com/#feat=eot
+     -  .svg, .svgz (품질 유지를 위한 벡터 그래픽 / 파일 크기가 크다.) : https://caniuse.com/#feat=svg
 
 
 ---
