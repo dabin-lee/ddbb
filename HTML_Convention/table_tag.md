@@ -1,8 +1,14 @@
 #  table 태그 기본 구조 (접근성, 시맨틱)
 
 - HTML <tbody> 요소는 표의 여러 행(<tr>)을 묶어서 표 본문을 구성합니다.
-- `<tr></tr>` = 행
-- `<td></td>` = 셀
+- `<th></th>` = table head / 표의 제목
+- `<tr></tr>` = 행 / table row 약자 / 가로 줄을 만드는 역할
+- `<td></td>` = 셀 / table data 약자 / 셀을 만드는 역할 
+
+
+## table 속성 :
+- colspan : colmn span 약자 /(가로줄)을 합치는 개수를 지정
+- rowspan : row span약자 / 세로줄을 합치는 개수를 지정
 
 
 ### [scope]
